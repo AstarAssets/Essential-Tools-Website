@@ -4,16 +4,14 @@ site:
   description: "Premium Game Development Tools"
   home: "https://astar-assets.notion.site/ESSENTIAL-TOOLS-19071d4f255080ac8b80f7fe686de914"
 
-# Pages Slugs
 pages:
   - url: "https://astar-assets.notion.site/TOOLS-19f71d4f255080998d25de4f36ddd916"
-    slug: "Tools"
+    slug: "tools"
   - url: "https://astar-assets.notion.site/FRAMEWORK-1ac71d4f255081f39c23f6b3fafac3ac"
-    slug: "Framework"
+    slug: "framework"
   - url: "https://astar-assets.notion.site/SMART-COMPONENTS-1ac71d4f255080b28a42d7b6c57e67c9"
-    slug: "Smart Components"
+    slug: "smart-components"
 
-# Visual Coustom
 custom_style: |
   .notion-topbar { display: none !important; }
   .notion-cursor-listener > div:last-child { display: none !important; }
