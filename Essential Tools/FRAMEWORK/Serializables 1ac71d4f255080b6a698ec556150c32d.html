@@ -1,5 +1,11 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Serializables</title><style>
-/* cspell:disable-file */
+<html>
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   Serializables
+  </title>
+  <style>
+   /* cspell:disable-file */
 /* webkit printing magic: print all background colors */
 html {
 	-webkit-print-color-adjust: exact;
@@ -709,15 +715,225 @@ blockquote.quote-large {
 .checkbox-off {
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
-	
-</style></head><body><article id="1ac71d4f-2550-80b6-a698-ec556150c32d" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🔸</span></div><h1 class="page-title" dir="auto">Serializables</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><div id="1d571d4f-2550-803d-b275-d1e561b43b16" class="column-list"><div style="display:contents" dir="auto"><div id="1d571d4f-2550-806e-af4b-f2980f4da694" style="width:12.5%" class="column"></div></div><div style="display:contents" dir="auto"><div id="1d571d4f-2550-809e-946e-cabb4827c063" style="width:87.5%" class="column"></div></div></div></div><div style="display:contents" dir="auto"><hr id="1d571d4f-2550-8094-880b-e98ae71c9742"/></div><div style="display:contents" dir="auto"><p id="1d571d4f-2550-80aa-94f3-da64f21fce0b" class="">
-</p></div><div style="display:contents" dir="auto"><div id="1ac71d4f-2550-80fd-b16c-d74e35af8afd" class="column-list"><div style="display:contents" dir="auto"><div id="1ac71d4f-2550-8067-8fe8-cde74fcc601e" style="width:18.75%" class="column"><div style="display:contents" dir="ltr"><nav id="1ac71d4f-2550-8062-ac74-dd822bd96787" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1ac71d4f-2550-8094-8a9e-c984b13b7948">🔸Overview</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1ac71d4f-2550-8026-9bb3-d41608bfa7fe">🔸SerializableAction</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1ac71d4f-2550-80ff-906e-f37bc5f16dfe">🔸SerializableEvent</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1ac71d4f-2550-800d-95b5-c9104a71edc1">🔸SerializableDictionary</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1ac71d4f-2550-8064-93a1-fd034f7f15e2">🔸SerializableHashSet</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1ad71d4f-2550-8062-9dc4-ea0bee8b8fda">🔸SerializableArray</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1ac71d4f-2550-80a5-8b65-c30e7b2b07f8">🔸SerializableMatrix</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1ac71d4f-2550-8071-bae9-d9673b5abca1">🔸SerializableQuaternion</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1ac71d4f-2550-80f7-88bf-f525c6d26bde">🔸SerializableScriptableEvent</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1ac71d4f-2550-805a-8365-d28250f46171">🔸SerializableScriptableObject</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1ac71d4f-2550-8029-9f77-d87a8b728ff8">🔸API</a></div></nav></div><div style="display:contents" dir="auto"><p id="1ad71d4f-2550-8059-a975-f5b1e00cfa3b" class="">
-</p></div></div></div><div style="display:contents" dir="auto"><div id="1ac71d4f-2550-8055-aa34-ff48f22138d1" style="width:81.25%" class="column"><div style="display:contents" dir="auto"><h2 id="1ac71d4f-2550-8094-8a9e-c984b13b7948" class="">🔸Overview</h2></div><div style="display:contents" dir="auto"><hr id="1ac71d4f-2550-80bd-9bba-f80569e0932d"/></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80cd-8c2d-e2a2d2b0ee4a" class="">
-</p></div><div style="display:contents" dir="ltr"><figure id="1ac71d4f-2550-806d-ac5b-e5074ea169bc"><div class="source"><a href="https://youtu.be/eEGaIeKo734">https://youtu.be/eEGaIeKo734</a></div></figure></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80b8-a4f6-c9dfd5166cd1" class="">
-</p></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔸SerializableAction</summary><div class="indented"><div style="display:contents" dir="auto"><hr id="1ac71d4f-2550-8060-be5a-c37c4fe2d258"/></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔸SerializableAction</summary><div class="indented"><div style="display:contents" dir="auto"><hr id="1ac71d4f-2550-801d-81b3-d3530f9fb309"/></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80b4-81ba-db4eec8d8b60" class="">
-</p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8053-a049-ea56b4ab1796" class=""><strong>Info: </strong><div class="indented"><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80a5-8782-e16d72608380" class="block-color-gray_background">Serializable Action paramless an class to permit serialize <strong><span style="border-bottom:0.05em solid">UnityActions</span></strong> into saving and load methods.</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80e7-b25f-c85e74521406" class="">
-</p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8071-8991-d859c5e833ed" class=""><strong>View:</strong><div class="indented"><div style="display:contents" dir="ltr"><figure id="1ac71d4f-2550-80b0-9226-ebb5293094ef" class="image"><a href="Serializables/SerializableAction.png"><img style="width:480px" src="Serializables/SerializableAction.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-804c-893c-c9bdbe497a89" class="">
-</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8061-8acd-dfbcbbe0062f" class=""><strong>How To Use:</strong><div class="indented"><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1ac71d4f-2550-8012-a936-f601995f8b01" class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">	  #region Variables
+  </style>
+  <style>
+   /* notionbackup injection */
+body { white-space: normal !important; }
+p { min-height: 1em !important; }
+.code, code { font-size: 100% !important; }
+blockquote { font-size: 100% !important; }
+.callout { white-space: normal !important; }
+.callout div:has(span.icon) { font-size: 100% !important; }
+.source:not(.bookmark) { font-size: 100% !important; }
+  </style>
+ </head>
+ <body>
+  <article class="page sans">
+   <header>
+    <div class="page-header-icon undefined">
+     <span class="icon">
+      🔸
+     </span>
+    </div>
+    <h1 class="page-title" dir="auto">
+     Serializables
+    </h1>
+    <p class="page-description" dir="auto">
+    </p>
+   </header>
+   <div class="page-body">
+    <div dir="auto" style="display:contents">
+     <div class="column-list">
+      <div dir="auto" style="display:contents">
+       <div class="column" style="width:12.5%">
+       </div>
+      </div>
+      <div dir="auto" style="display:contents">
+       <div class="column" style="width:87.5%">
+       </div>
+      </div>
+     </div>
+    </div>
+    <div dir="auto" style="display:contents">
+     <hr/>
+    </div>
+    <div dir="auto" style="display:contents">
+     <p>
+     </p>
+    </div>
+    <div dir="auto" style="display:contents">
+     <div class="column-list">
+      <div dir="auto" style="display:contents">
+       <div class="column" style="width:18.75%">
+        <div dir="ltr" style="display:contents">
+         <nav class="block-color-gray table_of_contents">
+          <div class="table_of_contents-item table_of_contents-indent-0">
+           <a class="table_of_contents-link" href="#1ac71d4f-2550-8094-8a9e-c984b13b7948">
+            🔸Overview
+           </a>
+          </div>
+          <div class="table_of_contents-item table_of_contents-indent-1">
+           <a class="table_of_contents-link" href="#1ac71d4f-2550-8026-9bb3-d41608bfa7fe">
+            🔸SerializableAction
+           </a>
+          </div>
+          <div class="table_of_contents-item table_of_contents-indent-1">
+           <a class="table_of_contents-link" href="#1ac71d4f-2550-80ff-906e-f37bc5f16dfe">
+            🔸SerializableEvent
+           </a>
+          </div>
+          <div class="table_of_contents-item table_of_contents-indent-1">
+           <a class="table_of_contents-link" href="#1ac71d4f-2550-800d-95b5-c9104a71edc1">
+            🔸SerializableDictionary
+           </a>
+          </div>
+          <div class="table_of_contents-item table_of_contents-indent-1">
+           <a class="table_of_contents-link" href="#1ac71d4f-2550-8064-93a1-fd034f7f15e2">
+            🔸SerializableHashSet
+           </a>
+          </div>
+          <div class="table_of_contents-item table_of_contents-indent-1">
+           <a class="table_of_contents-link" href="#1ad71d4f-2550-8062-9dc4-ea0bee8b8fda">
+            🔸SerializableArray
+           </a>
+          </div>
+          <div class="table_of_contents-item table_of_contents-indent-1">
+           <a class="table_of_contents-link" href="#1ac71d4f-2550-80a5-8b65-c30e7b2b07f8">
+            🔸SerializableMatrix
+           </a>
+          </div>
+          <div class="table_of_contents-item table_of_contents-indent-1">
+           <a class="table_of_contents-link" href="#1ac71d4f-2550-8071-bae9-d9673b5abca1">
+            🔸SerializableQuaternion
+           </a>
+          </div>
+          <div class="table_of_contents-item table_of_contents-indent-1">
+           <a class="table_of_contents-link" href="#1ac71d4f-2550-80f7-88bf-f525c6d26bde">
+            🔸SerializableScriptableEvent
+           </a>
+          </div>
+          <div class="table_of_contents-item table_of_contents-indent-1">
+           <a class="table_of_contents-link" href="#1ac71d4f-2550-805a-8365-d28250f46171">
+            🔸SerializableScriptableObject
+           </a>
+          </div>
+          <div class="table_of_contents-item table_of_contents-indent-0">
+           <a class="table_of_contents-link" href="#1ac71d4f-2550-8029-9f77-d87a8b728ff8">
+            🔸API
+           </a>
+          </div>
+         </nav>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+       </div>
+      </div>
+      <div dir="auto" style="display:contents">
+       <div class="column" style="width:81.25%">
+        <div dir="auto" style="display:contents">
+         <h2>
+          🔸Overview
+         </h2>
+        </div>
+        <div dir="auto" style="display:contents">
+         <hr/>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="ltr" style="display:contents">
+         <figure>
+          <div class="source">
+           <a href="https://youtu.be/eEGaIeKo734">
+            https://youtu.be/eEGaIeKo734
+           </a>
+          </div>
+         </figure>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <details open="">
+          <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+           🔸SerializableAction
+          </summary>
+          <div class="indented">
+           <div dir="auto" style="display:contents">
+            <hr/>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              🔸SerializableAction
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Info:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <p class="block-color-gray_background">
+                   Serializable Action paramless an class to permit serialize
+                   <strong>
+                    <span style="border-bottom:0.05em solid">
+                     UnityActions
+                    </span>
+                   </strong>
+                   into saving and load methods.
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 View:
+                </strong>
+                <div class="indented">
+                 <div dir="ltr" style="display:contents">
+                  <figure class="image">
+                   <a href="Serializables/SerializableAction.png">
+                    <img src="Serializables/SerializableAction.png" style="width:480px"/>
+                   </a>
+                  </figure>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 How To Use:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <script crossorigin="anonymous" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+                  </script>
+                  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+                  <pre class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">	  #region Variables
 
 		public UnityAction unityAction;
 
@@ -731,34 +947,252 @@ blockquote.quote-large {
 		{
 				unityAction += ExampleTest;
 	
-				serializableAction = new SerializableAction(this, &quot;ExampleTest&quot;);
+				serializableAction = new SerializableAction(this, "ExampleTest");
     }
 		
-		#endregion</code></pre></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-808f-a69b-db2560396f0f" class="">
-</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8062-8363-f6b11a626150" class=""><strong>Conversion:</strong><div class="indented"><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1ac71d4f-2550-8002-acfa-e10f3337e9a8" class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">	// FROM
+		#endregion</code></pre>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Conversion:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <script crossorigin="anonymous" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+                  </script>
+                  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+                  <pre class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">	// FROM
 	serializableAction = SerializableAction.ConvertFromUnityAction(unityAction, this);
 	 
 	// TO
-	unityAction = SerializableAction.ConvertToUnityAction(serializableAction);</code></pre></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80f8-83c3-e41eaa26f12c" class="">
-</p></div></div></p></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔸SerializableAction&lt;<mark class="highlight-teal">T</mark>&gt;</summary><div class="indented"><div style="display:contents" dir="auto"><hr id="1ac71d4f-2550-80ab-9ffc-fd4838cb3fef"/></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8077-be93-e60816c7296b" class="">
-</p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8068-b6df-fe6b03b948c9" class=""><strong>Info: </strong><div class="indented"><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8059-b185-d8bc34abc00b" class="block-color-gray_background">Serializable Action&lt;<mark class="highlight-teal">T</mark>&gt;  an class to permit serialize <strong><span style="border-bottom:0.05em solid">UnityActions&lt;</span></strong><mark class="highlight-teal"><strong><span style="border-bottom:0.05em solid">T</span></strong></mark><strong><span style="border-bottom:0.05em solid">&gt;</span></strong> into saving and load methods with one parameter.</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80a3-b5fe-ce8e0367b652" class="">
-</p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-806a-83e8-d55e086bee7f" class=""><strong>View:</strong><div class="indented"><div style="display:contents" dir="ltr"><figure id="1ac71d4f-2550-806b-af14-c154995f4a81" class="image"><a href="Serializables/SerializableActionT.png"><img style="width:432px" src="Serializables/SerializableActionT.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8061-9f6e-e784be0d128d" class="">
-</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8039-9523-e57e6f9b26c3" class=""><strong>How To Use:</strong><div class="indented"><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1ac71d4f-2550-8020-a32a-d116002132d2" class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">	public UnityAction&lt;bool&gt; unityAction;
+	unityAction = SerializableAction.ConvertToUnityAction(serializableAction);</code></pre>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              🔸SerializableAction&lt;
+              <mark class="highlight-teal">
+               T
+              </mark>
+              &gt;
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Info:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <p class="block-color-gray_background">
+                   Serializable Action&lt;
+                   <mark class="highlight-teal">
+                    T
+                   </mark>
+                   &gt;  an class to permit serialize
+                   <strong>
+                    <span style="border-bottom:0.05em solid">
+                     UnityActions&lt;
+                    </span>
+                   </strong>
+                   <mark class="highlight-teal">
+                    <strong>
+                     <span style="border-bottom:0.05em solid">
+                      T
+                     </span>
+                    </strong>
+                   </mark>
+                   <strong>
+                    <span style="border-bottom:0.05em solid">
+                     &gt;
+                    </span>
+                   </strong>
+                   into saving and load methods with one parameter.
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 View:
+                </strong>
+                <div class="indented">
+                 <div dir="ltr" style="display:contents">
+                  <figure class="image">
+                   <a href="Serializables/SerializableActionT.png">
+                    <img src="Serializables/SerializableActionT.png" style="width:432px"/>
+                   </a>
+                  </figure>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 How To Use:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <script crossorigin="anonymous" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+                  </script>
+                  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+                  <pre class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">	public UnityAction&lt;bool&gt; unityAction;
 
 	public SerializableAction&lt;bool&gt; serializableAction;
 	
 	unityAction += ExampleTest;
 
-	serializableAction = new SerializableAction&lt;bool&gt;(this, &quot;ExampleTest&quot;); </code></pre></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80ac-a6cf-dcbc2c20be9a" class="">
-</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-800d-8083-e6b6e0a760ec" class=""><strong>Conversion:</strong><div class="indented"><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1ac71d4f-2550-8042-b0d8-d3999b809a8c" class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">// FROM
+	serializableAction = new SerializableAction&lt;bool&gt;(this, "ExampleTest"); </code></pre>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Conversion:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <script crossorigin="anonymous" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+                  </script>
+                  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+                  <pre class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">// FROM
 serializableAction = SerializableAction&lt;bool&gt;.ConvertFromUnityAction(unityAction);
 
 // TO
-unityAction = SerializableAction&lt;bool&gt;.ConvertToUnityAction(serializableAction);</code></pre></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8004-b854-f74e2a1bf3b0" class="">
-</p></div></div></p></div></div></details></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔸SerializableEvent</summary><div class="indented"><div style="display:contents" dir="auto"><hr id="1ac71d4f-2550-80a0-98d8-fa7ad10b1e6b"/></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔸SerializableEvent</summary><div class="indented"><div style="display:contents" dir="auto"><hr id="1ac71d4f-2550-8057-a5b9-e3a49bc62e77"/></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80da-8c26-d5fe076b386c" class="">
-</p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8098-86e6-c48f4251ba72" class=""><strong>Info: </strong><div class="indented"><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-805b-83bc-f459560798fd" class="block-color-gray_background">Serializable Event paramless an class to permit serialize <strong><span style="border-bottom:0.05em solid">UnityEvent</span></strong> into saving and load methods.</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80bf-8605-f057f8dfcaa8" class="">
-</p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8007-adef-c66fe3615077" class=""><strong>View:</strong><div class="indented"><div style="display:contents" dir="ltr"><figure id="1ac71d4f-2550-80c7-8746-caf0141fc6e6" class="image"><a href="Serializables/SerializableEvent.png"><img style="width:384px" src="Serializables/SerializableEvent.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-802e-b6bf-f7702f243d58" class="">
-</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8016-a2d2-e921dc63a7e5" class=""><strong>How To Use:</strong><div class="indented"><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1ac71d4f-2550-80aa-a452-f28a964302f6" class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">	 	#region Variables
+unityAction = SerializableAction&lt;bool&gt;.ConvertToUnityAction(serializableAction);</code></pre>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+          </div>
+         </details>
+        </div>
+        <div dir="auto" style="display:contents">
+         <details open="">
+          <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+           🔸SerializableEvent
+          </summary>
+          <div class="indented">
+           <div dir="auto" style="display:contents">
+            <hr/>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              🔸SerializableEvent
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Info:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <p class="block-color-gray_background">
+                   Serializable Event paramless an class to permit serialize
+                   <strong>
+                    <span style="border-bottom:0.05em solid">
+                     UnityEvent
+                    </span>
+                   </strong>
+                   into saving and load methods.
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 View:
+                </strong>
+                <div class="indented">
+                 <div dir="ltr" style="display:contents">
+                  <figure class="image">
+                   <a href="Serializables/SerializableEvent.png">
+                    <img src="Serializables/SerializableEvent.png" style="width:384px"/>
+                   </a>
+                  </figure>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 How To Use:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <script crossorigin="anonymous" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+                  </script>
+                  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+                  <pre class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">	 	#region Variables
 	 	
 		public UnityEvent unityEvent;
 		
@@ -774,7 +1208,7 @@ unityAction = SerializableAction&lt;bool&gt;.ConvertToUnityAction(serializableAc
 				unityEvent.RemoveAllListeners();
 				unityEvent.RemoveListener(ExampleTestEmpty);
 	
-				SerializableAction serializableAction = new SerializableAction(this, &quot;ExampleTestEmpty&quot;);
+				SerializableAction serializableAction = new SerializableAction(this, "ExampleTestEmpty");
 				serializableEvent.AddListener(serializableAction);
 				serializableEvent.RemoveAllListeners();
 				serializableEvent.RemoveListener(serializableAction);
@@ -784,101 +1218,927 @@ unityAction = SerializableAction&lt;bool&gt;.ConvertToUnityAction(serializableAc
 			{
 	
 			}		
-		 #endregion</code></pre></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8012-bf0e-fabd174a178d" class="">
-</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8078-a105-ffbc40477044" class=""><strong>Conversion:</strong><div class="indented"><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1ac71d4f-2550-807b-b72d-ffa2fb6e80d8" class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">		// FROM
+		 #endregion</code></pre>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Conversion:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <script crossorigin="anonymous" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+                  </script>
+                  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+                  <pre class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">		// FROM
 			serializableEvent = SerializableEvent.ConvertFromUnityEvent(unityEvent);
 
 		// TO
-		unityEvent = SerializableEvent.ConvertToUnityEvent(serializableEvent);</code></pre></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-809f-9be0-f819a669ddb0" class="">
-</p></div></div></p></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔸SerializableEvent&lt;<mark class="highlight-teal">T</mark>&gt;</summary><div class="indented"><div style="display:contents" dir="auto"><hr id="1ac71d4f-2550-80b1-a161-d1b2f0c657f2"/></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8082-a80f-fbbccae74b9c" class="">
-</p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8029-982f-dc3bc2d8595f" class=""><strong>Info: </strong><div class="indented"><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8070-8502-c6b5670df813" class="block-color-gray_background">Serializable Event&lt;<mark class="highlight-teal">T</mark>&gt;  an class to permit serialize <strong><span style="border-bottom:0.05em solid">UnityEvent&lt;</span></strong><mark class="highlight-teal"><strong><span style="border-bottom:0.05em solid">T</span></strong></mark><strong><span style="border-bottom:0.05em solid">&gt;</span></strong> into saving and load methods with one parameter.</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80b4-b919-ee1c94b40ce3" class="">
-</p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-805c-b8f6-c34d5c83f9e1" class=""><strong>View:</strong><div class="indented"><div style="display:contents" dir="ltr"><figure id="1ac71d4f-2550-805f-b696-cb588f79b8ff" class="image"><a href="Serializables/SerializableEventT.png"><img style="width:432px" src="Serializables/SerializableEventT.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80aa-9fd8-f95f202728c0" class="">
-</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8095-a8fe-fd72271782a0" class=""><strong>How To Use:</strong><div class="indented"><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1ac71d4f-2550-80ab-99e9-dad99fb00f69" class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">	public UnityEvent&lt;bool&gt; unityEventParam;
+		unityEvent = SerializableEvent.ConvertToUnityEvent(serializableEvent);</code></pre>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              🔸SerializableEvent&lt;
+              <mark class="highlight-teal">
+               T
+              </mark>
+              &gt;
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Info:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <p class="block-color-gray_background">
+                   Serializable Event&lt;
+                   <mark class="highlight-teal">
+                    T
+                   </mark>
+                   &gt;  an class to permit serialize
+                   <strong>
+                    <span style="border-bottom:0.05em solid">
+                     UnityEvent&lt;
+                    </span>
+                   </strong>
+                   <mark class="highlight-teal">
+                    <strong>
+                     <span style="border-bottom:0.05em solid">
+                      T
+                     </span>
+                    </strong>
+                   </mark>
+                   <strong>
+                    <span style="border-bottom:0.05em solid">
+                     &gt;
+                    </span>
+                   </strong>
+                   into saving and load methods with one parameter.
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 View:
+                </strong>
+                <div class="indented">
+                 <div dir="ltr" style="display:contents">
+                  <figure class="image">
+                   <a href="Serializables/SerializableEventT.png">
+                    <img src="Serializables/SerializableEventT.png" style="width:432px"/>
+                   </a>
+                  </figure>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 How To Use:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <script crossorigin="anonymous" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+                  </script>
+                  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+                  <pre class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">	public UnityEvent&lt;bool&gt; unityEventParam;
 	public SerializableEvent&lt;bool&gt; serializableEventParam;
 	
 	unityEventParam.AddListener( ExampleTestBool );
 
-	var serializableActionBool = new SerializableAction&lt;bool&gt;(this, &quot;ExampleTestBool&quot;);
+	var serializableActionBool = new SerializableAction&lt;bool&gt;(this, "ExampleTestBool");
 
-	serializableEventParam.AddListener(serializableActionBool);</code></pre></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8062-841f-de27eba90119" class="">
-</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-803b-8a9a-df38d279cc0d" class=""><strong>Conversion:</strong><div class="indented"><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1ac71d4f-2550-809c-bf3d-f9ae92b802f1" class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">	// FROM
+	serializableEventParam.AddListener(serializableActionBool);</code></pre>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Conversion:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <script crossorigin="anonymous" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+                  </script>
+                  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+                  <pre class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">	// FROM
 	serializableEventParam = SerializableEvent&lt;bool&gt;.ConvertFromUnityEvent(unityEventParam);
 	
 	// TO
-	unityEventParam = SerializableEvent&lt;bool&gt;.ConvertToUnityEvent(serializableEventParam);</code></pre></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8074-a725-e4c80565034d" class="">
-</p></div></div></p></div></div></details></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔸SerializableDictionary</summary><div class="indented"><div style="display:contents" dir="auto"><hr id="1ac71d4f-2550-800e-81b5-d6ef729bb9b5"/></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔸SerializableDictionary&lt;<mark class="highlight-teal">TKey, </mark><mark class="highlight-blue">TValue</mark>&gt;</summary><div class="indented"><div style="display:contents" dir="auto"><hr id="1ac71d4f-2550-80d4-adaf-cbbf1d393ff0"/></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-800d-9c2a-fe3028b9164d" class="">
-</p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8027-a787-e622ee306f16" class=""><strong>Info: </strong><div class="indented"><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-804b-9881-de2bbe158d01" class="block-color-gray_background">Serializable Dictionary an class to permit serialize Dictionaries into saving and load methods.</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8012-b36d-d5637ee3cddf" class="">
-</p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-800e-8ee6-d6e3497d3f88" class=""><strong>View:</strong><div class="indented"><div style="display:contents" dir="ltr"><figure id="1ac71d4f-2550-8072-849c-e01622a5b9ca" class="image"><a href="Serializables/Dicionar.png"><img style="width:432px" src="Serializables/Dicionar.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-801d-809c-ec6c2ed5ed7d" class="">
-</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8055-b282-e211f687a4ab" class=""><strong>How To Use:</strong><div class="indented"><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1ac71d4f-2550-808e-92f0-d1f5c14c59d7" class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all"> public SerializableDictionary&lt;string, int&gt; Dictionary = new();
+	unityEventParam = SerializableEvent&lt;bool&gt;.ConvertToUnityEvent(serializableEventParam);</code></pre>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+          </div>
+         </details>
+        </div>
+        <div dir="auto" style="display:contents">
+         <details open="">
+          <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+           🔸SerializableDictionary
+          </summary>
+          <div class="indented">
+           <div dir="auto" style="display:contents">
+            <hr/>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              🔸SerializableDictionary&lt;
+              <mark class="highlight-teal">
+               TKey,
+              </mark>
+              <mark class="highlight-blue">
+               TValue
+              </mark>
+              &gt;
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Info:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <p class="block-color-gray_background">
+                   Serializable Dictionary an class to permit serialize Dictionaries into saving and load methods.
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 View:
+                </strong>
+                <div class="indented">
+                 <div dir="ltr" style="display:contents">
+                  <figure class="image">
+                   <a href="Serializables/Dicionar.png">
+                    <img src="Serializables/Dicionar.png" style="width:432px"/>
+                   </a>
+                  </figure>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 How To Use:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <script crossorigin="anonymous" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+                  </script>
+                  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+                  <pre class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all"> public SerializableDictionary&lt;string, int&gt; Dictionary = new();
  
  public void ExampleTestEmpty()
  {
      Dictionary = new Dictionary&lt;string, int&gt;();
- }</code></pre></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-806e-b6b6-f9c2c8c2d5db" class="">
-</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8025-81bd-dc2540639451" class=""><strong>Conversion:</strong><div class="indented"><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1ac71d4f-2550-80e6-9a2f-d405562ce5f2" class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">    // FROM
+ }</code></pre>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Conversion:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <script crossorigin="anonymous" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+                  </script>
+                  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+                  <pre class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">    // FROM
     SerializableDictionary = DictionaryNormal;
 
 		// TO
-    DictionaryNormal = SerializableDictionary;</code></pre></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8010-8d97-fc05283d7731" class="">
-</p></div></div></p></div></div></details></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔸SerializableHashSet</summary><div class="indented"><div style="display:contents" dir="auto"><hr id="1ac71d4f-2550-805b-9b47-fd9a93d5dbac"/></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔸SerializableHashSet&lt;<mark class="highlight-teal">T</mark>&gt;</summary><div class="indented"><div style="display:contents" dir="auto"><hr id="1ac71d4f-2550-807b-8612-cb95c2d834bb"/></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8059-bf9e-da35d7ee99b4" class="">
-</p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80c4-8277-c7502fd2cc4c" class=""><strong>Info: </strong><div class="indented"><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8064-9373-dc7c9e660235" class="block-color-gray_background">Serializable HashSet an class to permit serialize HashSet into saving and load methods.</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-808f-ad6d-d19fd3aac984" class="">
-</p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8057-953f-cd55f319b517" class=""><strong>View:</strong><div class="indented"><div style="display:contents" dir="ltr"><figure id="1ac71d4f-2550-80d4-a884-c226d65f8742" class="image"><a href="Serializables/Hash.png"><img style="width:384px" src="Serializables/Hash.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-804d-b35d-e1279f3451fc" class="">
-</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8093-977a-d4cabbbd5714" class=""><strong>How To Use:</strong><div class="indented"><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1ac71d4f-2550-805f-bea6-e5985fea13be" class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all"> public SerializableHashSet&lt;float&gt; HashSet = new();
+    DictionaryNormal = SerializableDictionary;</code></pre>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+          </div>
+         </details>
+        </div>
+        <div dir="auto" style="display:contents">
+         <details open="">
+          <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+           🔸SerializableHashSet
+          </summary>
+          <div class="indented">
+           <div dir="auto" style="display:contents">
+            <hr/>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              🔸SerializableHashSet&lt;
+              <mark class="highlight-teal">
+               T
+              </mark>
+              &gt;
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Info:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <p class="block-color-gray_background">
+                   Serializable HashSet an class to permit serialize HashSet into saving and load methods.
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 View:
+                </strong>
+                <div class="indented">
+                 <div dir="ltr" style="display:contents">
+                  <figure class="image">
+                   <a href="Serializables/Hash.png">
+                    <img src="Serializables/Hash.png" style="width:384px"/>
+                   </a>
+                  </figure>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 How To Use:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <script crossorigin="anonymous" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+                  </script>
+                  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+                  <pre class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all"> public SerializableHashSet&lt;float&gt; HashSet = new();
  
- HashSet = new HashSet&lt;float&gt;();</code></pre></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-803f-a140-d21966880d9c" class="">
-</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8059-96d0-d6bd90d6e79f" class=""><strong>Conversion:</strong><div class="indented"><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1ac71d4f-2550-80e7-b0c4-c5b9f6472299" class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all"> HashSetNormal = SerializableHashSet;
+ HashSet = new HashSet&lt;float&gt;();</code></pre>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Conversion:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <script crossorigin="anonymous" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+                  </script>
+                  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+                  <pre class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all"> HashSetNormal = SerializableHashSet;
 
- SerializableHashSet = HashSetNormal;</code></pre></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8072-ba85-d2b5f303ffbf" class="">
-</p></div></div></p></div></div></details></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔸SerializableArray</summary><div class="indented"><div style="display:contents" dir="auto"><hr id="1ad71d4f-2550-8005-93bd-cef9fc105c99"/></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔸SerializableArray&lt;<mark class="highlight-teal">T</mark>&gt; </summary><div class="indented"><div style="display:contents" dir="auto"><hr id="1ad71d4f-2550-808d-b690-c5db24191841"/></div><div style="display:contents" dir="auto"><p id="1ad71d4f-2550-806c-ba3b-e599ba7a3a2d" class="">
-</p></div><div style="display:contents" dir="auto"><p id="1ad71d4f-2550-8008-9da1-c71a9b555fb6" class=""><strong>Info: </strong><div class="indented"><div style="display:contents" dir="auto"><p id="1ad71d4f-2550-8020-b6fd-cf0c02635cbb" class="block-color-gray_background">Serializable Array&lt;T&gt; an class to permit serialize Array into saving and load methods.</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ad71d4f-2550-8084-bdf9-d6966f030b89" class="">
-</p></div><div style="display:contents" dir="auto"><p id="1ad71d4f-2550-80a4-9923-e6163a18d10e" class=""><strong>View:</strong><div class="indented"><div style="display:contents" dir="ltr"><figure id="1ad71d4f-2550-807b-9b7f-ca010f6aa20b" class="image"><a href="Serializables/Array.png"><img style="width:432px" src="Serializables/Array.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="1ad71d4f-2550-8013-aab1-c1504988bbe5" class="">
-</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ad71d4f-2550-809b-88c2-dc3b70403522" class=""><strong>How To Use:</strong><div class="indented"><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1ad71d4f-2550-8084-bce8-db1643073bc4" class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all"> public SerializableArray&lt;float&gt; Array = new();
+ SerializableHashSet = HashSetNormal;</code></pre>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+          </div>
+         </details>
+        </div>
+        <div dir="auto" style="display:contents">
+         <details open="">
+          <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+           🔸SerializableArray
+          </summary>
+          <div class="indented">
+           <div dir="auto" style="display:contents">
+            <hr/>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              🔸SerializableArray&lt;
+              <mark class="highlight-teal">
+               T
+              </mark>
+              &gt;
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Info:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <p class="block-color-gray_background">
+                   Serializable Array&lt;T&gt; an class to permit serialize Array into saving and load methods.
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 View:
+                </strong>
+                <div class="indented">
+                 <div dir="ltr" style="display:contents">
+                  <figure class="image">
+                   <a href="Serializables/Array.png">
+                    <img src="Serializables/Array.png" style="width:432px"/>
+                   </a>
+                  </figure>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 How To Use:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <script crossorigin="anonymous" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+                  </script>
+                  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+                  <pre class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all"> public SerializableArray&lt;float&gt; Array = new();
  
  Array = new SerializableArray&lt;float&gt;();
- Array = new SerializableArray&lt;float&gt;(new float[3] {7,7,7},new Vector2Int(3,3)); // array type , array size [0,0] as Vector2Int</code></pre></div><div style="display:contents" dir="auto"><p id="1ad71d4f-2550-80c7-af89-f4d7c586a37a" class="">
-</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ad71d4f-2550-8098-9a21-db8635536f98" class=""><strong>Advanced:</strong><div class="indented"><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1ad71d4f-2550-80ab-81d4-ea2abe5d8369" class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">  Array.AddRow([]x, []y); // itemaArray example float[]x float[]y
+ Array = new SerializableArray&lt;float&gt;(new float[3] {7,7,7},new Vector2Int(3,3)); // array type , array size [0,0] as Vector2Int</code></pre>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Advanced:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <script crossorigin="anonymous" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+                  </script>
+                  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+                  <pre class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">  Array.AddRow([]x, []y); // itemaArray example float[]x float[]y
   Array.AddSize(x,y); // item size x , y example float float
   Array.Resize(x,y,force);// rezise x, y force example float float bool
-  Array.Set(x, y, value); // set at position x, y the value of type float in this example</code></pre></div><div style="display:contents" dir="auto"><p id="1ad71d4f-2550-8056-8249-f477cfd33685" class="">
-</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ad71d4f-2550-80fc-935f-e1a43f7cadf4" class=""><strong>Conversion:</strong><div class="indented"><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1ad71d4f-2550-808a-b6f5-c87524eef605" class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">  float[] myfloatArray = new float[3];
+  Array.Set(x, y, value); // set at position x, y the value of type float in this example</code></pre>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Conversion:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <script crossorigin="anonymous" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+                  </script>
+                  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+                  <pre class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">  float[] myfloatArray = new float[3];
 
   Array = myfloatArray;
 
-  myfloatArray = Array;</code></pre></div><div style="display:contents" dir="auto"><p id="1ad71d4f-2550-8066-98cc-d0cd84c0e5d3" class="">
-</p></div></div></p></div></div></details></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔸SerializableMatrix</summary><div class="indented"><div style="display:contents" dir="auto"><hr id="1ac71d4f-2550-807b-9f3b-f2c5f9382b53"/></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔸SerializableMatrix&lt;<mark class="highlight-teal">T</mark>&gt; where <mark class="highlight-teal">T</mark> : <mark class="highlight-red">numeral ( int, float, double )</mark></summary><div class="indented"><div style="display:contents" dir="auto"><hr id="1ac71d4f-2550-8044-b0b0-e6d45e4491a5"/></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80c6-9068-c8f470c894ac" class="">
-</p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-803f-a297-ddeb74666c3e" class=""><strong>Info: </strong><div class="indented"><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-805e-aa31-ecd6c181c479" class="block-color-gray_background">Serializable Matrix&lt;T&gt; an class to permit serialize Matrix into saving and load methods. <em><mark class="highlight-red"><strong>( Don’t have an interface, code only )</strong></mark></em></p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80a9-b401-e1fb744479fa" class="">
-</p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-805a-acfc-e8fc4bffb62d" class=""><strong>How To Use:</strong><div class="indented"><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1ac71d4f-2550-80f0-b51d-d69721107297" class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all"> public SerializableMatrix&lt;float&gt; Matrix = new();
+  myfloatArray = Array;</code></pre>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+          </div>
+         </details>
+        </div>
+        <div dir="auto" style="display:contents">
+         <details open="">
+          <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+           🔸SerializableMatrix
+          </summary>
+          <div class="indented">
+           <div dir="auto" style="display:contents">
+            <hr/>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              🔸SerializableMatrix&lt;
+              <mark class="highlight-teal">
+               T
+              </mark>
+              &gt; where
+              <mark class="highlight-teal">
+               T
+              </mark>
+              :
+              <mark class="highlight-red">
+               numeral ( int, float, double )
+              </mark>
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Info:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <p class="block-color-gray_background">
+                   Serializable Matrix&lt;T&gt; an class to permit serialize Matrix into saving and load methods.
+                   <em>
+                    <mark class="highlight-red">
+                     <strong>
+                      ( Don’t have an interface, code only )
+                     </strong>
+                    </mark>
+                   </em>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 How To Use:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <script crossorigin="anonymous" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+                  </script>
+                  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+                  <pre class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all"> public SerializableMatrix&lt;float&gt; Matrix = new();
  
  Matrix = new SerializableMatrix&lt;float&gt;();
- Matrix = new SerializableMatrix&lt;float&gt;(5,10); // row | column</code></pre></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-806a-9341-d27893da6191" class="">
-</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8052-bbee-e46b76213923" class=""><strong>Advanced:</strong><div class="indented"><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1ac71d4f-2550-8067-acb7-d2f357d190cb" class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">    Matrix.AddToFirstEmpty(itemToAdd);
+ Matrix = new SerializableMatrix&lt;float&gt;(5,10); // row | column</code></pre>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Advanced:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <script crossorigin="anonymous" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+                  </script>
+                  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+                  <pre class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">    Matrix.AddToFirstEmpty(itemToAdd);
     Matrix.AddToLocation(itemToAdd, row, column);
-    Matrix.Add(itemToAdd);</code></pre></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80e2-8f4b-eb32d7c79766" class="">
-</p></div></div></p></div></div></details></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔸SerializableQuaternion</summary><div class="indented"><div style="display:contents" dir="auto"><hr id="1ac71d4f-2550-80f7-ad99-c040801dfb2b"/></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔸SerializableQuaternion </summary><div class="indented"><div style="display:contents" dir="auto"><hr id="1ac71d4f-2550-808a-9fcd-dd86f7a2e6bf"/></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80c0-a6f4-ffc6ea77c66d" class="">
-</p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8092-a9ba-f3fdefd0c803" class=""><strong>Info: </strong><div class="indented"><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8015-84bd-f8fb34295cfc" class="block-color-gray_background">Serializable Quaternion an class to permit serialize Quaternion into saving and load methods.</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8047-b45b-fb5478b8cccd" class="">
-</p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8094-be37-ca94e67fdfe9" class=""><strong>View:</strong><div class="indented"><div style="display:contents" dir="ltr"><figure id="1ac71d4f-2550-8025-b0e4-d36ed25d5059" class="image"><a href="Serializables/Quaternion.png"><img style="width:432px" src="Serializables/Quaternion.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80dc-8d23-e8f2fb8459fb" class="">
-</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80ec-98a9-c550928668d1" class=""><strong>How To Use:</strong><div class="indented"><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1ac71d4f-2550-8042-9b9d-e655dddd5ace" class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">  public SerializableQuaternion serializableQuaternion = new();
+    Matrix.Add(itemToAdd);</code></pre>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+          </div>
+         </details>
+        </div>
+        <div dir="auto" style="display:contents">
+         <details open="">
+          <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+           🔸SerializableQuaternion
+          </summary>
+          <div class="indented">
+           <div dir="auto" style="display:contents">
+            <hr/>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              🔸SerializableQuaternion
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Info:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <p class="block-color-gray_background">
+                   Serializable Quaternion an class to permit serialize Quaternion into saving and load methods.
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 View:
+                </strong>
+                <div class="indented">
+                 <div dir="ltr" style="display:contents">
+                  <figure class="image">
+                   <a href="Serializables/Quaternion.png">
+                    <img src="Serializables/Quaternion.png" style="width:432px"/>
+                   </a>
+                  </figure>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 How To Use:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <script crossorigin="anonymous" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+                  </script>
+                  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+                  <pre class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">  public SerializableQuaternion serializableQuaternion = new();
   
-  serializableQuaternion = new Quaternion();</code></pre></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-800a-953d-d4be9ab95ac4" class="">
-</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80be-a807-c88e249e91d7" class=""><strong>Conversion:</strong><div class="indented"><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1ac71d4f-2550-80d9-9543-ebe51d2fecff" class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">  // FROM
+  serializableQuaternion = new Quaternion();</code></pre>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Conversion:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <script crossorigin="anonymous" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+                  </script>
+                  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+                  <pre class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">  // FROM
   SerializableQuaternion = NormalQuaternion; 
 		
 	// TO	
-  NormalQuaternion = SerializableQuaternion;</code></pre></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80f8-9bd7-c3bd0de93444" class="">
-</p></div></div></p></div></div></details></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔸SerializableScriptableEvent</summary><div class="indented"><div style="display:contents" dir="auto"><hr id="1ac71d4f-2550-8049-aaf7-f168ea3b72f5"/></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔸SerializableScriptableEvent</summary><div class="indented"><div style="display:contents" dir="auto"><hr id="1ac71d4f-2550-806a-87ab-cc265f24e800"/></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80cf-9d57-c184a8ffabdd" class="">
-</p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8031-8944-caf76662ec25" class=""><strong>Info: </strong><div class="indented"><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-802c-9328-f27a2b4c749a" class="block-color-gray_background">Serializable Scriptable Event an class to permit Serializable Event as scriptable object.</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8054-9df1-da5b5a33d2c3" class="">
-</p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80e0-b0f3-c5628afd7364" class=""><strong>View:</strong><div class="indented"><div style="display:contents" dir="ltr"><figure id="1ac71d4f-2550-806c-b09f-fc8dd37e86fc" class="image"><a href="Serializables/SerializableScriptable.png"><img style="width:384px" src="Serializables/SerializableScriptable.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-800e-97dc-f68b65b6cf12" class="">
-</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8048-b038-d8c4647c0fdf" class=""><strong>How To Use:</strong><div class="indented"><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1ac71d4f-2550-80cd-8de6-fac2f55daa6f" class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all"> public SerializableScriptableEvent ScriptableEvent;
+  NormalQuaternion = SerializableQuaternion;</code></pre>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+          </div>
+         </details>
+        </div>
+        <div dir="auto" style="display:contents">
+         <details open="">
+          <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+           🔸SerializableScriptableEvent
+          </summary>
+          <div class="indented">
+           <div dir="auto" style="display:contents">
+            <hr/>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              🔸SerializableScriptableEvent
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Info:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <p class="block-color-gray_background">
+                   Serializable Scriptable Event an class to permit Serializable Event as scriptable object.
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 View:
+                </strong>
+                <div class="indented">
+                 <div dir="ltr" style="display:contents">
+                  <figure class="image">
+                   <a href="Serializables/SerializableScriptable.png">
+                    <img src="Serializables/SerializableScriptable.png" style="width:384px"/>
+                   </a>
+                  </figure>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 How To Use:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <script crossorigin="anonymous" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+                  </script>
+                  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+                  <pre class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all"> public SerializableScriptableEvent ScriptableEvent;
  
- ScriptableEvent = new SerializableScriptableEvent();</code></pre></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80eb-a05c-dbf1a668d5c2" class="">
-</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80ed-8193-f278eb5502e5" class=""><strong>Advanced:</strong><div class="indented"><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1ac71d4f-2550-80d9-90f8-e0f82c58fbca" class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">ScriptableEvent.EventName = &quot;MyEventName&quot;;
-ScriptableEvent.EventDescription = &quot;MyEventDescription&quot;;
+ ScriptableEvent = new SerializableScriptableEvent();</code></pre>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Advanced:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <script crossorigin="anonymous" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+                  </script>
+                  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+                  <pre class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">ScriptableEvent.EventName = "MyEventName";
+ScriptableEvent.EventDescription = "MyEventDescription";
 SerializableEvent&lt;bool&gt; MySerializableEvent = ScriptableEvent.GetSerializableEvent&lt;bool&gt;(); // Get Serializable Event from it
 
-MySerializableEvent.Invoke(true); // Invoke the Event</code></pre></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80cf-9939-fe7b94fed9dc" class="">
-</p></div></div></p></div></div></details></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔸SerializableScriptableObject</summary><div class="indented"><div style="display:contents" dir="auto"><hr id="1ac71d4f-2550-8098-bf64-fe0278945997"/></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔸SerializableScriptableObject</summary><div class="indented"><div style="display:contents" dir="auto"><hr id="1ac71d4f-2550-8016-8173-fd8bb38ec492"/></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-804c-8194-f9755183b1c9" class="">
-</p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80f3-9f52-e24cf5e36dba" class=""><strong>Info: </strong><div class="indented"><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8080-9426-c248c2249ad1" class="block-color-gray_background">Serializable Scriptable Object an class to permit serialize Object as Scriptable Object. <em><mark class="highlight-red"><strong>(interface only, require coding)</strong></mark></em></p></div><div style="display:contents" dir="auto"><p id="1ad71d4f-2550-8048-a8e8-e36d1bb7ba3f" class="">
-</p></div></div></p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-809a-b54f-ec95e5985688" class=""><strong>How To Use:</strong><div class="indented"><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1ac71d4f-2550-80a1-85c9-c4770d5d852b" class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">[CreateAssetMenu(fileName = &quot;MyData&quot;, menuName = &quot;ScriptableObjects/MyData&quot;)]
+MySerializableEvent.Invoke(true); // Invoke the Event</code></pre>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+          </div>
+         </details>
+        </div>
+        <div dir="auto" style="display:contents">
+         <details open="">
+          <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+           🔸SerializableScriptableObject
+          </summary>
+          <div class="indented">
+           <div dir="auto" style="display:contents">
+            <hr/>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              🔸SerializableScriptableObject
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Info:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <p class="block-color-gray_background">
+                   Serializable Scriptable Object an class to permit serialize Object as Scriptable Object.
+                   <em>
+                    <mark class="highlight-red">
+                     <strong>
+                      (interface only, require coding)
+                     </strong>
+                    </mark>
+                   </em>
+                  </p>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 How To Use:
+                </strong>
+                <div class="indented">
+                 <div dir="auto" style="display:contents">
+                  <script crossorigin="anonymous" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+                  </script>
+                  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+                  <pre class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">[CreateAssetMenu(fileName = "MyData", menuName = "ScriptableObjects/MyData")]
 public class MyData : SerializableScriptableObject&lt;MyData&gt;
 {
     public int myInt;
@@ -888,21 +2148,21 @@ public class MyData : SerializableScriptableObject&lt;MyData&gt;
     public override void OnDeserialization(object sender)
     {
         base.OnDeserialization(sender);
-        Debug.Log(&quot;MyData Deserialized&quot;);
+        Debug.Log("MyData Deserialized");
     }
 }
 
 public class MyDataSaver : MonoBehaviour
 {
     public MyData dataToSave;
-    public string fileName = &quot;myData.json&quot;;
+    public string fileName = "myData.json";
 
     public void SaveData()
     {
         if (dataToSave != null)
         {
             dataToSave.Serialize(fileName, dataToSave);
-            Debug.Log(&quot;Data saved to &quot; + fileName);
+            Debug.Log("Data saved to " + fileName);
         }
     }
 }
@@ -910,18 +2170,67 @@ public class MyDataSaver : MonoBehaviour
 public class MyDataLoader : MonoBehaviour
 {
     public MyData dataToLoad;
-    public string fileName = &quot;myData.json&quot;;
+    public string fileName = "myData.json";
 
     public void LoadData()
     {
         if (dataToLoad != null &amp;&amp; File.Exists(fileName))
         {
             dataToLoad.Deserialize(fileName);
-            Debug.Log(&quot;Data loaded from &quot; + fileName);
+            Debug.Log("Data loaded from " + fileName);
         }
     }
-}</code></pre></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-80b3-8b69-dda746a0b1a5" class="">
-</p></div></div></p></div></div></details></div></div></details></div><div style="display:contents" dir="auto"><h2 id="1ac71d4f-2550-8029-9f77-d87a8b728ff8" class="">🔸API</h2></div><div style="display:contents" dir="auto"><hr id="1ac71d4f-2550-80df-a0cb-d72a4d8268c9"/></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8022-9972-f1c52cbc5dfd" class="">
-</p></div><div style="display:contents" dir="ltr"><figure id="1ac71d4f-2550-802c-b53a-ca02286fa0a9"><div class="source"><a href="https://astarassets.github.io/EssentialToolsAPI/#CSharpClass:AstarLibrary.Core.Serializables.ISerializableArrayHandler">https://astarassets.github.io/EssentialToolsAPI/#CSharpClass:AstarLibrary.Core.Serializables.ISerializableArrayHandler</a></div></figure></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8001-ad11-e43ebcbaebd2" class="">
-</p></div><div style="display:contents" dir="auto"><p id="1ac71d4f-2550-8035-8f2d-ef7a0fc8103d" class="">
-</p></div></div></div></div></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+}</code></pre>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+          </div>
+         </details>
+        </div>
+        <div dir="auto" style="display:contents">
+         <h2>
+          🔸API
+         </h2>
+        </div>
+        <div dir="auto" style="display:contents">
+         <hr/>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="ltr" style="display:contents">
+         <figure>
+          <div class="source">
+           <a href="https://astarassets.github.io/EssentialToolsAPI/#CSharpClass:AstarLibrary.Core.Serializables.ISerializableArrayHandler">
+            https://astarassets.github.io/EssentialToolsAPI/#CSharpClass:AstarLibrary.Core.Serializables.ISerializableArrayHandler
+           </a>
+          </div>
+         </figure>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </article>
+  <span class="sans" style="font-size:14px;padding-top:2em">
+  </span>
+ </body>
+</html>
