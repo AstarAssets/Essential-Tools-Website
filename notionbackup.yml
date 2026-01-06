@@ -1,0 +1,6 @@
+token: ${NOTION_TOKEN}
+
+pages:
+  - id: 19071d4f255080ac8b80f7fe686de914
+    title: Essential Tools
+    output: dist
