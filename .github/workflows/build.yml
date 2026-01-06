@@ -24,18 +24,14 @@ jobs:
 
       - name: Clone Loconotion
         run: |
-          git clone https://github.com/leoncvlt/loconotion.git .loconotion
-          pip install -r .loconotion/requirements.txt
+          # Clonamos o conteúdo direto para a pasta atual
+          git clone https://github.com/leoncvlt/loconotion.git .
+          pip install -r requirements.txt
 
       - name: Run Loconotion
         run: |
-          # Movemos os arquivos necessários para a pasta do loconotion para evitar erro de path
-          cp config.yaml .loconotion/config.yaml
-          cd .loconotion
-          # Rodamos com o modo log ativo para ver o erro real se falhar
-          python loconotion.py config.yaml
-          # Movemos a pasta gerada para o local correto
-          mv dist ../dist
+          # Rodamos como módulo conforme a estrutura do repo oficial
+          python -m loconotion config.yaml
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
