@@ -1,0 +1,2245 @@
+<html>
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   Base
+  </title>
+  <style>
+   /* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+  </style>
+  <style>
+   /* notionbackup injection */
+body { white-space: normal !important; }
+p { min-height: 1em !important; }
+.code, code { font-size: 100% !important; }
+blockquote { font-size: 100% !important; }
+.callout { white-space: normal !important; }
+.callout div:has(span.icon) { font-size: 100% !important; }
+.source:not(.bookmark) { font-size: 100% !important; }
+  </style>
+ </head>
+ <body>
+  <article class="page sans">
+   <header>
+    <div class="page-header-icon undefined">
+     <span class="icon">
+      🔸
+     </span>
+    </div>
+    <h1 class="page-title" dir="auto">
+     Base
+    </h1>
+    <p class="page-description" dir="auto">
+    </p>
+   </header>
+   <div class="page-body">
+    <div dir="auto" style="display:contents">
+     <div class="column-list">
+      <div dir="auto" style="display:contents">
+       <div class="column" style="width:12.5%">
+       </div>
+      </div>
+      <div dir="auto" style="display:contents">
+       <div class="column" style="width:87.5%">
+       </div>
+      </div>
+     </div>
+    </div>
+    <div dir="auto" style="display:contents">
+     <hr/>
+    </div>
+    <div dir="auto" style="display:contents">
+     <p>
+     </p>
+    </div>
+    <div dir="auto" style="display:contents">
+     <div class="column-list">
+      <div dir="auto" style="display:contents">
+       <div class="column" style="width:18.75%">
+        <div dir="ltr" style="display:contents">
+         <nav class="block-color-gray table_of_contents">
+          <div class="table_of_contents-item table_of_contents-indent-0">
+           <a class="table_of_contents-link" href="#1ac71d4f-2550-808b-b8f0-ce74a77b7044">
+            🔸Overview
+           </a>
+          </div>
+          <div class="table_of_contents-item table_of_contents-indent-1">
+           <a class="table_of_contents-link" href="#1ac71d4f-2550-809a-af5b-eeda32a710a0">
+            🔸Editor
+           </a>
+          </div>
+          <div class="table_of_contents-item table_of_contents-indent-1">
+           <a class="table_of_contents-link" href="#1ac71d4f-2550-80eb-b73b-c1b81eacd222">
+            🔸Runtime
+           </a>
+          </div>
+          <div class="table_of_contents-item table_of_contents-indent-0">
+           <a class="table_of_contents-link" href="#1ac71d4f-2550-8042-ab16-fdbb2ca84e25">
+            🔸API
+           </a>
+          </div>
+         </nav>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+       </div>
+      </div>
+      <div dir="auto" style="display:contents">
+       <div class="column" style="width:81.25%">
+        <div dir="auto" style="display:contents">
+         <h2>
+          🔸Overview
+         </h2>
+        </div>
+        <div dir="auto" style="display:contents">
+         <hr/>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="ltr" style="display:contents">
+         <figure>
+          <div class="source">
+           <a href="https://youtu.be/4i2sVOC-YzQ">
+            https://youtu.be/4i2sVOC-YzQ
+           </a>
+          </div>
+         </figure>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <details open="">
+          <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+           🔸Editor
+          </summary>
+          <div class="indented">
+           <div dir="auto" style="display:contents">
+            <hr/>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              🔸How to Custom Configurate Editor
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Info:
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p class="block-color-gray_background">
+                Each component of the Framework Core features a dedicated custom editor. To extend its functionality for your specific needs, follow the guidelines below
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 View:
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <div class="indented">
+                 <div dir="ltr" style="display:contents">
+                  <figure class="image">
+                   <a href="Base/Core_Att.png">
+                    <img src="Base/Core_Att.png" style="width:432px"/>
+                   </a>
+                  </figure>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Functions:
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 override SetName()
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 override SetIcon()
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 override DrawValues()
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 override DrawIcons()
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Examples:
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <script crossorigin="anonymous" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+               </script>
+               <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+               <pre class="code code-wrap"><code class="language-C#" style="white-space:pre-wrap;word-break:break-all">using AstarLibrary.Core.Framework;
+using AstarLibrary.AstarEditor.Customs;
+
+public class Example : Element // Here you can use any part like Cog, Manager, Module etc..
+{
+    public bool iconButton; // Some parts will show instant only by having fields or properties here.
+}
+
+
+[CustomEditor(typeof(Example), true)]
+public class ExampleCustomEditor : ElementCustomEditor
+{
+    #region Variables
+    protected SerializedProperty _toggleMyIcon; // Pointer for a boolean in Example Class
+
+    public Texture2D _iconInfo;
+
+    public string TOOLTIP_INFO = "my Tooltip";
+    #endregion
+
+    #region Public Methods
+    public override void OnEnable()
+    {
+        base.OnEnable();
+
+        //Load your textures (icons) properties here.
+        _iconInfo = AssetDatabase.LoadAssetAtPath&lt;Texture2D&gt;(AssetUtility.HandleFindAsset("Default"));
+    }
+
+    public override void Setup()
+    {
+        base.Setup();
+
+        // Your Code here | Recommend initalize Textures, Properties etc.. here.
+    }
+    public override void SetName()
+    {
+        _elementName = "Quick Actions"; // _[name of part]Name for change the title of QuickActions
+    }
+    public override void SetIcon()
+    {
+        _elementIcon = "Essential-Tools_Icon_Unique_Chrono"; // _[name of part]Icon for change the icon of Part, string is case sensitive
+    }
+    public override void DrawIcons()
+    {
+        base.DrawIcons();
+
+        // If you need more Icons put then like this to stay in the pattern, or chose clear and put on your way
+        _toggleMyIcon.boolValue = GUILayout.Toggle(_toggleMyIcon.boolValue, new GUIContent(_iconInfo, TOOLTIP_INFO), "Button", GUILayout.Width(20), GUILayout.Height(20));
+    }
+    public override void DrawBody()
+    {
+        base.DrawBody();
+
+        //Your body custom here.
+    }
+    #endregion
+}</code></pre>
+              </div>
+             </div>
+            </details>
+           </div>
+          </div>
+         </details>
+        </div>
+        <div dir="auto" style="display:contents">
+         <details open="">
+          <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+           🔸Runtime
+          </summary>
+          <div class="indented">
+           <div dir="auto" style="display:contents">
+            <hr/>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              🔸Cog
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Info:
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p class="block-color-gray_background">
+                Cog serves as the foundational component for system construction, providing a robust base for complex logic.
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Functions
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Lock
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Log
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Singleton Pattern
+                 <mark class="highlight-orange_background">
+                  <strong>
+                   (
+                  </strong>
+                 </mark>
+                 <mark class="highlight-teal">
+                  <mark class="highlight-orange_background">
+                   <strong>
+                    on
+                   </strong>
+                  </mark>
+                 </mark>
+                 <mark class="highlight-orange_background">
+                  <strong>
+                   /
+                  </strong>
+                 </mark>
+                 <mark class="highlight-red">
+                  <mark class="highlight-orange_background">
+                   <strong>
+                    off
+                   </strong>
+                  </mark>
+                 </mark>
+                 <mark class="highlight-orange_background">
+                  <strong>
+                   )
+                  </strong>
+                 </mark>
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Protected
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 View:
+                </strong>
+                <div class="indented">
+                 <div dir="ltr" style="display:contents">
+                  <figure class="image">
+                   <a href="Base/Captura_de_tela_2025-03-05_060157.png">
+                    <img src="Base/Captura_de_tela_2025-03-05_060157.png" style="width:336px"/>
+                   </a>
+                  </figure>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              🔸Controller
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Inherit:
+                </strong>
+                from Module
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Info:
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p class="block-color-gray_background">
+                Controller manages all objects of type &lt;T&gt;, offering centralized control and efficient data handling.
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Functions
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Log
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Lock
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 PlayMode
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 List
+                 <mark class="highlight-teal">
+                  <strong>
+                   &lt;T&gt;
+                  </strong>
+                 </mark>
+                 Group
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 ApplyControl
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 SetControl
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 GetControl
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Subscribe
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 View:
+                </strong>
+                <div class="indented">
+                 <div dir="ltr" style="display:contents">
+                  <figure class="image">
+                   <a href="Base/Captura_de_tela_2025-03-05_060203.png">
+                    <img src="Base/Captura_de_tela_2025-03-05_060203.png" style="width:336px"/>
+                   </a>
+                  </figure>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              🔸Element
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Info:
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p class="block-color-gray_background">
+                Element is a streamlined MonoBehaviour instance, featuring quick setup and real-time parameter display via ToggleInfo.
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Functions
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Log
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Lock
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Information
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 View:
+                </strong>
+                <div class="indented">
+                 <div dir="ltr" style="display:contents">
+                  <figure class="image">
+                   <a href="Base/Captura_de_tela_2025-03-05_060208.png">
+                    <img src="Base/Captura_de_tela_2025-03-05_060208.png" style="width:336px"/>
+                   </a>
+                  </figure>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              🔸Frame
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Inherit:
+                </strong>
+                from Module
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Info:
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p class="block-color-gray_background">
+                Frame acts as an indirect Module variant, designed for specialized use cases and modular variations.
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Functions
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Log
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Lock
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 PlayMode
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 View:
+                </strong>
+                <div class="indented">
+                 <div dir="ltr" style="display:contents">
+                  <figure class="image">
+                   <a href="Base/Captura_de_tela_2025-03-05_060213.png">
+                    <img src="Base/Captura_de_tela_2025-03-05_060213.png" style="width:336px"/>
+                   </a>
+                  </figure>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              🔸Hull
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Inherit:
+                </strong>
+                from Module
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Info:
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p class="block-color-gray_background">
+                Hull provides a robust termination point for scripts, incorporating an event-driven check to seamlessly transition to subsequent logic.
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Functions
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Log
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Lock
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 PlayMode
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Event
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 onFinish
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 View:
+                </strong>
+                <div class="indented">
+                 <div dir="ltr" style="display:contents">
+                  <figure class="image">
+                   <a href="Base/Captura_de_tela_2025-03-05_060219.png">
+                    <img src="Base/Captura_de_tela_2025-03-05_060219.png" style="width:336px"/>
+                   </a>
+                  </figure>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              🔸Manager
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Inherit:
+                </strong>
+                from Cog&lt;
+                <mark class="highlight-teal">
+                 <strong>
+                  T
+                 </strong>
+                </mark>
+                &gt; or Hull
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Info:
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p class="block-color-gray_background">
+                Manager offers flexible management, supporting both single-function controllers and robust singleton-protected main managers.
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Functions
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Log
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Lock
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 PlayMode
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Event
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 onFinish
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Singleton Pattern
+                 <mark class="highlight-orange_background">
+                  <strong>
+                   (
+                  </strong>
+                 </mark>
+                 <mark class="highlight-teal">
+                  <mark class="highlight-orange_background">
+                   <strong>
+                    on
+                   </strong>
+                  </mark>
+                 </mark>
+                 <mark class="highlight-orange_background">
+                  <strong>
+                   /
+                  </strong>
+                 </mark>
+                 <mark class="highlight-red">
+                  <mark class="highlight-orange_background">
+                   <strong>
+                    off
+                   </strong>
+                  </mark>
+                 </mark>
+                 <mark class="highlight-orange_background">
+                  <strong>
+                   )
+                  </strong>
+                 </mark>
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Protected
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 View:
+                </strong>
+                <div class="indented">
+                 <div dir="ltr" style="display:contents">
+                  <figure class="image">
+                   <a href="Base/Captura_de_tela_2025-03-05_060224.png">
+                    <img src="Base/Captura_de_tela_2025-03-05_060224.png" style="width:336px"/>
+                   </a>
+                  </figure>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              🔸Module
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Info:
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p class="block-color-gray_background">
+                Module is the core of the framework, enabling modular architecture and serving as the base class for all components.
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Functions
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Log
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Lock
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 PlayMode
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 PlayModeDelay
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Coroutine
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 View:
+                </strong>
+                <div class="indented">
+                 <div dir="ltr" style="display:contents">
+                  <figure class="image">
+                   <a href="Base/Captura_de_tela_2025-03-05_060229.png">
+                    <img src="Base/Captura_de_tela_2025-03-05_060229.png" style="width:336px"/>
+                   </a>
+                  </figure>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              🔸Nexus
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Info:
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p class="block-color-gray_background">
+                Nexus extends Module functionality with asynchronous iteration, enhancing performance for parallel tasks.
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Functions
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Log
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Lock
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 PlayMode
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 PlayModeDelay
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Async
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 View:
+                </strong>
+                <div class="indented">
+                 <div dir="ltr" style="display:contents">
+                  <figure class="image">
+                   <a href="Base/Captura_de_tela_2025-03-05_060233.png">
+                    <img src="Base/Captura_de_tela_2025-03-05_060233.png" style="width:336px"/>
+                   </a>
+                  </figure>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              🔸Wall
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Info:
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p class="block-color-gray_background">
+                Wall provides a secure container for data and logic, ensuring encapsulated and protected operations.
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Functions
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Log
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Lock
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Protected Full
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 View:
+                </strong>
+                <div class="indented">
+                 <div dir="ltr" style="display:contents">
+                  <figure class="image">
+                   <a href="Base/Captura_de_tela_2025-03-05_060238.png">
+                    <img src="Base/Captura_de_tela_2025-03-05_060238.png" style="width:336px"/>
+                   </a>
+                  </figure>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              🔸Warden
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Inherit:
+                </strong>
+                from Module
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Info:
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p class="block-color-gray_background">
+                Warden is a centralized module that enhances worker coordination, streamlining complex workflows.
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Functions
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Log
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Lock
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 PlayMode
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Setup
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Watch
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Notify
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 View:
+                </strong>
+                <div class="indented">
+                 <div dir="ltr" style="display:contents">
+                  <figure class="image">
+                   <a href="Base/Captura_de_tela_2025-03-05_060243.png">
+                    <img src="Base/Captura_de_tela_2025-03-05_060243.png" style="width:336px"/>
+                   </a>
+                  </figure>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              🔸Worker
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Inherit:
+                </strong>
+                from Module
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Info:
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p class="block-color-gray_background">
+                Worker is the fundamental building block, designed for individual tasks and forming the basis of all functional scripts.
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 Functions
+                </strong>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Log
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Lock
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 PlayMode
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Active
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:disc">
+                 Once
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+                <strong>
+                 View:
+                </strong>
+                <div class="indented">
+                 <div dir="ltr" style="display:contents">
+                  <figure class="image">
+                   <a href="Base/Captura_de_tela_2025-03-05_060247.png">
+                    <img src="Base/Captura_de_tela_2025-03-05_060247.png" style="width:336px"/>
+                   </a>
+                  </figure>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                  </p>
+                 </div>
+                </div>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+          </div>
+         </details>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <h2>
+          🔸API
+         </h2>
+        </div>
+        <div dir="auto" style="display:contents">
+         <hr/>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="ltr" style="display:contents">
+         <figure>
+          <div class="source">
+           <a href="https://astarassets.github.io/EssentialToolsAPI/#CSharpClass:AstarLibrary.Core.Framework.Cog">
+            https://astarassets.github.io/EssentialToolsAPI/#CSharpClass:AstarLibrary.Core.Framework.Cog
+           </a>
+          </div>
+         </figure>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div dir="auto" style="display:contents">
+     <p>
+     </p>
+    </div>
+   </div>
+  </article>
+  <span class="sans" style="font-size:14px;padding-top:2em">
+  </span>
+ </body>
+</html>

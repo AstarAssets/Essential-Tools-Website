@@ -1,0 +1,3532 @@
+<html>
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   ESSENTIAL TOOLS
+  </title>
+  <style>
+   /* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+  </style>
+  <style>
+   /* notionbackup injection */
+body { white-space: normal !important; }
+p { min-height: 1em !important; }
+.code, code { font-size: 100% !important; }
+blockquote { font-size: 100% !important; }
+.callout { white-space: normal !important; }
+.callout div:has(span.icon) { font-size: 100% !important; }
+.source:not(.bookmark) { font-size: 100% !important; }
+  </style>
+ </head>
+ <body>
+  <article class="page sans">
+   <header>
+    <img class="page-cover-image" src="ESSENTIAL%20TOOLS/Website_Banner.png" style="object-position:center 100%"/>
+    <div class="page-header-icon page-header-icon-with-cover">
+     <img class="icon" src="ESSENTIAL%20TOOLS/Asset_30.png"/>
+    </div>
+    <h1 class="page-title" dir="auto">
+     ESSENTIAL TOOLS
+    </h1>
+    <p class="page-description" dir="auto">
+    </p>
+   </header>
+   <div class="page-body">
+    <div dir="auto" style="display:contents">
+     <hr/>
+    </div>
+    <div dir="auto" style="display:contents">
+     <div class="column-list">
+      <div dir="auto" style="display:contents">
+       <div class="column" style="width:24.000000000000007%">
+        <div dir="ltr" style="display:contents">
+         <figure class="link-to-page">
+          <a href="ESSENTIAL%20TOOLS/TOOLS%2019f71d4f255080998d25de4f36ddd916.html">
+           <span class="icon">
+            🔹
+           </span>
+           TOOLS
+          </a>
+         </figure>
+        </div>
+       </div>
+      </div>
+      <div dir="auto" style="display:contents">
+       <div class="column" style="width:32.00000000000001%">
+        <div dir="ltr" style="display:contents">
+         <figure class="block-color-default link-to-page">
+          <a href="ESSENTIAL%20TOOLS/FRAMEWORK%201ac71d4f255081f39c23f6b3fafac3ac.html">
+           <span class="icon">
+            🔹
+           </span>
+           FRAMEWORK
+          </a>
+         </figure>
+        </div>
+       </div>
+      </div>
+      <div dir="auto" style="display:contents">
+       <div class="column" style="width:44.000000000000014%">
+        <div dir="ltr" style="display:contents">
+         <figure class="link-to-page">
+          <a href="ESSENTIAL%20TOOLS/SMART%20COMPONENTS%201ac71d4f255080b28a42d7b6c57e67c9.html">
+           <span class="icon">
+            🔹
+           </span>
+           SMART COMPONENTS
+          </a>
+         </figure>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div dir="auto" style="display:contents">
+     <hr/>
+    </div>
+    <div dir="auto" style="display:contents">
+     <div class="column-list">
+      <div dir="auto" style="display:contents">
+       <div class="column" style="width:18.75%">
+        <div dir="auto" style="display:contents">
+         <p>
+          <mark class="highlight-blue">
+           <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+            INTRO
+           </a>
+          </mark>
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ul class="block-color-gray bulleted-list">
+          <li style="list-style-type:disc">
+           <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+            WELCOME
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ul class="block-color-gray bulleted-list">
+          <li style="list-style-type:disc">
+           <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+            QUICK START
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ul class="block-color-gray toggle">
+          <li>
+           <details open="">
+            <summary>
+             <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+              HOW TO INSTALL
+             </a>
+            </summary>
+            <div dir="auto" style="display:contents">
+             <ul class="bulleted-list">
+              <li style="list-style-type:disc">
+               <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+                AUTOMATIC
+               </a>
+              </li>
+             </ul>
+            </div>
+            <div dir="auto" style="display:contents">
+             <ul class="bulleted-list">
+              <li style="list-style-type:disc">
+               <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+                MANUAL
+               </a>
+              </li>
+             </ul>
+            </div>
+           </details>
+          </li>
+         </ul>
+        </div>
+        <div dir="auto" style="display:contents">
+         <hr/>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+          <mark class="highlight-teal">
+           <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+            KEY FEATURES
+           </a>
+          </mark>
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ul class="block-color-gray toggle">
+          <li>
+           <details open="">
+            <summary>
+             <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+              TOOLS
+             </a>
+            </summary>
+            <div dir="auto" style="display:contents">
+             <ul class="toggle">
+              <li>
+               <details open="">
+                <summary>
+                 <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+                  ARCHITECT
+                 </a>
+                </summary>
+                <div dir="auto" style="display:contents">
+                 <ul class="bulleted-list">
+                  <li style="list-style-type:disc">
+                   <a href="ESSENTIAL%20TOOLS/TOOLS/ARCHITECT%201a171d4f255080368ebde712eb0ba06d.html">
+                    QUICK START
+                   </a>
+                  </li>
+                 </ul>
+                </div>
+                <div dir="auto" style="display:contents">
+                 <ul class="bulleted-list">
+                  <li style="list-style-type:disc">
+                   <a href="ESSENTIAL%20TOOLS/TOOLS/ARCHITECT%201a171d4f255080368ebde712eb0ba06d.html">
+                    HOW TO USE
+                   </a>
+                  </li>
+                 </ul>
+                </div>
+               </details>
+              </li>
+             </ul>
+            </div>
+            <div dir="auto" style="display:contents">
+             <ul class="toggle">
+              <li>
+               <details open="">
+                <summary>
+                 <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+                  MASON
+                 </a>
+                </summary>
+                <div dir="auto" style="display:contents">
+                 <ul class="bulleted-list">
+                  <li style="list-style-type:disc">
+                   <a href="ESSENTIAL%20TOOLS/TOOLS/MASON%201a171d4f2550804899f0f37735ba8d4e.html">
+                    QUICK START
+                   </a>
+                  </li>
+                 </ul>
+                </div>
+                <div dir="auto" style="display:contents">
+                 <ul class="bulleted-list">
+                  <li style="list-style-type:disc">
+                   <a href="ESSENTIAL%20TOOLS/TOOLS/MASON%201a171d4f2550804899f0f37735ba8d4e.html">
+                    HOW TO USE
+                   </a>
+                  </li>
+                 </ul>
+                </div>
+               </details>
+              </li>
+             </ul>
+            </div>
+            <div dir="auto" style="display:contents">
+             <ul class="toggle">
+              <li>
+               <details open="">
+                <summary>
+                 <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+                  SMITH
+                 </a>
+                </summary>
+                <div dir="auto" style="display:contents">
+                 <ul class="bulleted-list">
+                  <li style="list-style-type:disc">
+                   <a href="ESSENTIAL%20TOOLS/TOOLS/SMITH%2019f71d4f2550800abb6cd5f71c3cf862.html">
+                    QUICK START
+                   </a>
+                  </li>
+                 </ul>
+                </div>
+                <div dir="auto" style="display:contents">
+                 <ul class="bulleted-list">
+                  <li style="list-style-type:disc">
+                   <a href="ESSENTIAL%20TOOLS/TOOLS/SMITH%2019f71d4f2550800abb6cd5f71c3cf862.html">
+                    HOW TO USE
+                   </a>
+                  </li>
+                 </ul>
+                </div>
+               </details>
+              </li>
+             </ul>
+            </div>
+           </details>
+          </li>
+         </ul>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ul class="block-color-gray toggle">
+          <li>
+           <details open="">
+            <summary>
+             <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+              FRAMEWORK
+             </a>
+            </summary>
+            <div dir="auto" style="display:contents">
+             <ul class="toggle">
+              <li>
+               <details open="">
+                <summary>
+                 <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+                  CORE
+                 </a>
+                </summary>
+                <div dir="auto" style="display:contents">
+                 <ul class="block-color-gray bulleted-list">
+                  <li style="list-style-type:disc">
+                   <a href="ESSENTIAL%20TOOLS/FRAMEWORK%201ac71d4f255081f39c23f6b3fafac3ac.html">
+                    QUICK SETUP
+                   </a>
+                  </li>
+                 </ul>
+                </div>
+                <div dir="auto" style="display:contents">
+                 <ul class="bulleted-list">
+                  <li style="list-style-type:disc">
+                   <mark class="highlight-gray">
+                    <a href="ESSENTIAL%20TOOLS/FRAMEWORK%201ac71d4f255081f39c23f6b3fafac3ac.html">
+                     HOW TO USE
+                    </a>
+                   </mark>
+                  </li>
+                 </ul>
+                </div>
+                <div dir="auto" style="display:contents">
+                 <ul class="bulleted-list">
+                  <li style="list-style-type:disc">
+                   <mark class="highlight-gray">
+                    <a href="ESSENTIAL%20TOOLS/FRAMEWORK%201ac71d4f255081f39c23f6b3fafac3ac.html">
+                     API
+                    </a>
+                   </mark>
+                  </li>
+                 </ul>
+                </div>
+               </details>
+              </li>
+             </ul>
+            </div>
+           </details>
+          </li>
+         </ul>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ul class="block-color-gray toggle">
+          <li>
+           <details open="">
+            <summary>
+             <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+              SMART COMPONENTS
+             </a>
+            </summary>
+            <div dir="auto" style="display:contents">
+             <ul class="bulleted-list">
+              <li style="list-style-type:disc">
+               <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+                ASPECT
+               </a>
+              </li>
+             </ul>
+            </div>
+            <div dir="auto" style="display:contents">
+             <ul class="bulleted-list">
+              <li style="list-style-type:disc">
+               <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+                CHAIN
+               </a>
+              </li>
+             </ul>
+            </div>
+            <div dir="auto" style="display:contents">
+             <ul class="bulleted-list">
+              <li style="list-style-type:disc">
+               <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+                DISPATCHER
+               </a>
+              </li>
+             </ul>
+            </div>
+            <div dir="auto" style="display:contents">
+             <ul class="bulleted-list">
+              <li style="list-style-type:disc">
+               <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+                EXPERIMENT
+               </a>
+              </li>
+             </ul>
+            </div>
+            <div dir="auto" style="display:contents">
+             <ul class="bulleted-list">
+              <li style="list-style-type:disc">
+               <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+                FADE
+               </a>
+              </li>
+             </ul>
+            </div>
+            <div dir="auto" style="display:contents">
+             <ul class="bulleted-list">
+              <li style="list-style-type:disc">
+               <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+                FLEX
+               </a>
+              </li>
+             </ul>
+            </div>
+            <div dir="auto" style="display:contents">
+             <ul class="bulleted-list">
+              <li style="list-style-type:disc">
+               <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+                SHIFT
+               </a>
+              </li>
+             </ul>
+            </div>
+           </details>
+          </li>
+         </ul>
+        </div>
+        <div dir="auto" style="display:contents">
+         <hr/>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+          <mark class="highlight-red">
+           <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+            FAQ
+           </a>
+          </mark>
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ul class="block-color-gray bulleted-list">
+          <li style="list-style-type:disc">
+           <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+            COMMOM QUESTIONS
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ul class="bulleted-list">
+          <li style="list-style-type:disc">
+           <mark class="highlight-gray">
+            <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+             COMPATIBILITY
+            </a>
+           </mark>
+          </li>
+         </ul>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ul class="bulleted-list">
+          <li style="list-style-type:disc">
+           <mark class="highlight-gray">
+            <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+             TROUBLESHOOT
+            </a>
+           </mark>
+          </li>
+         </ul>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <hr/>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+       </div>
+      </div>
+      <div dir="auto" style="display:contents">
+       <div class="column" style="width:81.25%">
+        <div dir="auto" style="display:contents">
+         <h1 class="block-color-gray_background">
+          📘 INTRO
+         </h1>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="ltr" style="display:contents">
+         <figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex">
+          <div style="width:100%">
+           <div dir="auto" style="display:contents">
+            <p>
+             <mark class="highlight-blue">
+              <strong>
+               Essential Tools
+              </strong>
+             </mark>
+             is a powerful and intuitive toolbox for
+             <strong>
+              Unity
+             </strong>
+             , designed to streamline your workflow and enhance game development efficiency. With a collection of essential utilities,
+             <em>
+              Essential Tools
+             </em>
+             helps you create, manage, and optimize projects faster by reducing repetitive tasks and boosting productivity.
+            </p>
+           </div>
+          </div>
+         </figure>
+        </div>
+        <div dir="auto" style="display:contents">
+         <h2>
+          💠 WELCOME
+         </h2>
+        </div>
+        <div dir="auto" style="display:contents">
+         <hr/>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+          This documentation will guide you through everything you need to know about
+          <em>
+           Essential Tools
+          </em>
+          , from installation to full integration with your Unity projects. Here, you will find:
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ul class="bulleted-list">
+          <li style="list-style-type:disc">
+           <mark class="highlight-blue">
+            <strong>
+             Installation Guide
+            </strong>
+           </mark>
+           – How to set up and get started.
+          </li>
+         </ul>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ul class="bulleted-list">
+          <li style="list-style-type:disc">
+           <mark class="highlight-blue">
+            <strong>
+             Key Features
+            </strong>
+           </mark>
+           – Overview of the available tools.
+          </li>
+         </ul>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ul class="bulleted-list">
+          <li style="list-style-type:disc">
+           <mark class="highlight-blue">
+            <strong>
+             Step-by-Step Tutorials
+            </strong>
+           </mark>
+           – Practical examples to improve your workflow.
+          </li>
+         </ul>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ul class="bulleted-list">
+          <li style="list-style-type:disc">
+           <mark class="highlight-blue">
+            <mark class="highlight-default_background">
+             <strong>
+              FAQ
+             </strong>
+            </mark>
+           </mark>
+           – Answers to common questions and troubleshooting tips.
+          </li>
+         </ul>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <h2>
+          🔷 QUICK START
+         </h2>
+        </div>
+        <div dir="auto" style="display:contents">
+         <hr/>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="ltr" style="display:contents">
+         <figure class="image" style="text-align:left">
+          <a href="ESSENTIAL%20TOOLS/Captura_de_tela_2025-02-05_032654.png">
+           <img src="ESSENTIAL%20TOOLS/Captura_de_tela_2025-02-05_032654.png" style="width:384px"/>
+          </a>
+         </figure>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+          To start using
+          <mark class="highlight-blue">
+           <strong>
+            Essential Tools
+           </strong>
+          </mark>
+          , you need to buy and download it directly from the
+          <strong>
+           Unity Asset Store
+          </strong>
+          :
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ol class="numbered-list" start="1" type="1">
+          <li>
+           <mark class="highlight-blue_background">
+            Open
+           </mark>
+           <mark class="highlight-blue_background">
+            <strong>
+             Unity
+            </strong>
+           </mark>
+           <mark class="highlight-blue_background">
+            and go to
+           </mark>
+           <mark class="highlight-blue_background">
+            <strong>
+             Window &gt; Asset Store
+            </strong>
+           </mark>
+           <mark class="highlight-blue_background">
+            (or visit the Unity Asset Store in your browser).
+           </mark>
+          </li>
+         </ol>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ol class="numbered-list" start="2" type="1">
+          <li>
+           <mark class="highlight-blue_background">
+            Search for
+           </mark>
+           <mark class="highlight-blue_background">
+            <strong>
+             Essential Tools
+            </strong>
+           </mark>
+           <mark class="highlight-blue_background">
+            and click
+           </mark>
+           <mark class="highlight-blue_background">
+            <strong>
+             Download
+            </strong>
+           </mark>
+           <mark class="highlight-blue_background">
+            .
+           </mark>
+          </li>
+         </ol>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ol class="numbered-list" start="3" type="1">
+          <li>
+           <mark class="highlight-blue_background">
+            Once downloaded, click
+           </mark>
+           <mark class="highlight-blue_background">
+            <strong>
+             Import
+            </strong>
+           </mark>
+           <mark class="highlight-blue_background">
+            to add it to your Unity project.
+           </mark>
+          </li>
+         </ol>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ol class="numbered-list" start="4" type="1">
+          <li>
+           <mark class="highlight-blue_background">
+            Open your
+           </mark>
+           <mark class="highlight-blue_background">
+            <strong>
+             Unity Project
+            </strong>
+           </mark>
+           <mark class="highlight-blue_background">
+            .
+           </mark>
+          </li>
+         </ol>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ol class="numbered-list" start="5" type="1">
+          <li>
+           <mark class="highlight-blue_background">
+            In the
+           </mark>
+           <mark class="highlight-blue_background">
+            <strong>
+             Package Manager
+            </strong>
+           </mark>
+           <mark class="highlight-blue_background">
+            (
+           </mark>
+           <mark class="highlight-blue_background">
+            <strong>
+             Window &gt; Package Manager
+            </strong>
+           </mark>
+           <mark class="highlight-blue_background">
+            ), find
+           </mark>
+           <em>
+            <mark class="highlight-default">
+             <mark class="highlight-blue_background">
+              <strong>
+               Essential Tools
+              </strong>
+             </mark>
+            </mark>
+           </em>
+           <mark class="highlight-blue_background">
+            .
+           </mark>
+          </li>
+         </ol>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ol class="numbered-list" start="6" type="1">
+          <li>
+           <mark class="highlight-blue_background">
+            Click
+           </mark>
+           <mark class="highlight-blue_background">
+            <strong>
+             Import
+            </strong>
+           </mark>
+           <mark class="highlight-blue_background">
+            and make sure all necessary files are selected
+           </mark>
+           <mark class="highlight-gray_background">
+            .
+           </mark>
+          </li>
+         </ol>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ol class="numbered-list" start="7" type="1">
+          <li>
+           <mark class="highlight-blue_background">
+            Unity will process the package and add it to your project
+           </mark>
+           .
+          </li>
+         </ol>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+          <strong>
+           You're Ready to Go!
+          </strong>
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+          Once imported, you’ll find
+          <mark class="highlight-blue">
+          </mark>
+          <mark class="highlight-blue">
+           <strong>
+            Essential Tools
+           </strong>
+          </mark>
+          in the
+          <strong>
+           Tools
+          </strong>
+          menu inside Unity.
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+          Now you can start using its features to streamline your workflow and enhance your development process!
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p class="block-color-blue_background">
+          <strong>
+           Next Steps:
+          </strong>
+          Check out the
+          <a href="ESSENTIAL%20TOOLS%2019071d4f255080ac8b80f7fe686de914.html">
+           Key Features
+          </a>
+          to explore the available tools and learn how to maximize their potential!
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <h2>
+          🔷 HOW TO INSTALL
+         </h2>
+        </div>
+        <div dir="auto" style="display:contents">
+         <hr/>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+          After successful installation a window should pop-up the
+          <strong>
+           Utility Panel
+          </strong>
+          as bellow:
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="ltr" style="display:contents">
+         <figure class="image">
+          <a href="ESSENTIAL%20TOOLS/Captura_de_tela_2025-02-05_032754.png">
+           <img src="ESSENTIAL%20TOOLS/Captura_de_tela_2025-02-05_032754.png" style="width:336px"/>
+          </a>
+         </figure>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <h3>
+          🔹 Automatic Installation
+         </h3>
+        </div>
+        <div dir="auto" style="display:contents">
+         <hr/>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ol class="block-color-blue_background numbered-list" start="1" type="1">
+          <li>
+           Begin by clicking the designated
+           <mark class="highlight-red">
+            <strong>
+             AUTO
+            </strong>
+           </mark>
+           button to initiate the installation process.
+          </li>
+         </ol>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ol class="block-color-blue_background numbered-list" start="2" type="1">
+          <li>
+           Wait while the installation completes. You can verify progress by checking if the
+           <strong>
+            Unity Edito
+           </strong>
+           r is loading scripts in the background or by monitoring the Console for a message indicating that the process is complete.
+          </li>
+         </ol>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ol class="block-color-blue_background numbered-list" start="3" type="1">
+          <li>
+           <mark class="highlight-default_background">
+            Once you receive confirmation via the Editor or
+           </mark>
+           <mark class="highlight-default_background">
+            <strong>
+             Console
+            </strong>
+           </mark>
+           <mark class="highlight-default_background">
+            , the installation is finished
+           </mark>
+           <div dir="auto" style="display:contents">
+            <ol class="numbered-list" start="1" type="a">
+             <li>
+              to receive confirmation make sure to click
+              <mark class="highlight-red">
+               <strong>
+                ENABLED CONSOLE LOG
+               </strong>
+              </mark>
+              <strong>
+              </strong>
+             </li>
+            </ol>
+           </div>
+          </li>
+         </ol>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+          <em>
+           <strong>
+            Now you are ready to use yours
+           </strong>
+          </em>
+          <em>
+           <mark class="highlight-blue">
+            <strong>
+             Essential Tools!
+            </strong>
+           </mark>
+          </em>
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <h3>
+          🔹 Manual Installation
+         </h3>
+        </div>
+        <div dir="auto" style="display:contents">
+         <hr/>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="ltr" style="display:contents">
+         <figure class="image">
+          <a href="ESSENTIAL%20TOOLS/Captura_de_tela_2025-02-06_112730.png">
+           <img src="ESSENTIAL%20TOOLS/Captura_de_tela_2025-02-06_112730.png" style="width:576px"/>
+          </a>
+         </figure>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ol class="numbered-list" start="1" type="1">
+          <li>
+           <strong>
+            Close the Utility Panel:
+           </strong>
+           <div dir="auto" style="display:contents">
+            <p>
+             Begin by closing the utility panel in Unity to ensure an unobstructed setup process.
+            </p>
+           </div>
+          </li>
+         </ol>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ol class="numbered-list" start="2" type="1">
+          <li>
+           <strong>
+            Review Documentation:
+           </strong>
+           <div dir="auto" style="display:contents">
+            <p>
+             Refer to the Essential Tools documentation to identify the required
+             <mark class="highlight-blue">
+              <mark class="highlight-blue_background">
+               definitions
+              </mark>
+             </mark>
+             and
+             <mark class="highlight-blue">
+              <mark class="highlight-blue_background">
+               dependencies
+              </mark>
+             </mark>
+             for your package.
+            </p>
+           </div>
+          </li>
+         </ol>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ol class="numbered-list" start="3" type="1">
+          <li>
+           <strong>
+            Download Dependencies:
+           </strong>
+           <div dir="auto" style="display:contents">
+            <ul class="bulleted-list">
+             <li style="list-style-type:disc">
+              Use the Unity Package Manager or visit the
+              <strong>
+               official website
+              </strong>
+              to download the necessary
+              <mark class="highlight-blue">
+               <mark class="highlight-blue_background">
+                dependencies.
+               </mark>
+              </mark>
+             </li>
+            </ul>
+           </div>
+           <div dir="auto" style="display:contents">
+            <ul class="bulleted-list">
+             <li style="list-style-type:disc">
+              For example, if using DOTween, download it and confirm that the DOTween Modules are installed properly.
+             </li>
+            </ul>
+           </div>
+           <div dir="auto" style="display:contents">
+            <ul class="bulleted-list">
+             <li style="list-style-type:disc">
+              Dependencies can be downloaded and installed by this doc, just check
+              <mark class="highlight-blue">
+               <mark class="highlight-blue_background">
+                Manual Installation Dependency
+               </mark>
+              </mark>
+              <em>
+               <mark class="highlight-blue">
+                <mark class="highlight-blue_background">
+                 <strong>
+                 </strong>
+                </mark>
+               </mark>
+              </em>
+              section in each product.
+             </li>
+            </ul>
+           </div>
+          </li>
+         </ol>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ol class="numbered-list" start="4" type="1">
+          <li>
+           <strong>
+            Configure Project Settings:
+           </strong>
+           <div dir="auto" style="display:contents">
+            <ul class="bulleted-list">
+             <li style="list-style-type:disc">
+              Navigate to
+              <strong>
+               Project Settings &gt; Player &gt; Other Settings
+              </strong>
+              within Unity.
+             </li>
+            </ul>
+           </div>
+           <div dir="auto" style="display:contents">
+            <ul class="bulleted-list">
+             <li style="list-style-type:disc">
+              Locate the section for scripting definitions.
+             </li>
+            </ul>
+           </div>
+           <div dir="auto" style="display:contents">
+            <ul class="bulleted-list">
+             <li style="list-style-type:disc">
+              For your convenience you can put the folder and definition on the scriptable object
+              <mark class="highlight-blue">
+               <mark class="highlight-blue_background">
+                Essential Tools Definitions
+               </mark>
+              </mark>
+              for easy setup.
+             </li>
+            </ul>
+           </div>
+           <div dir="auto" style="display:contents">
+            <ul class="bulleted-list">
+             <li style="list-style-type:disc">
+              Manually add the required
+              <mark class="highlight-blue">
+               <mark class="highlight-blue_background">
+                definitions
+               </mark>
+              </mark>
+              as outlined in the documentation.
+             </li>
+            </ul>
+           </div>
+          </li>
+         </ol>
+        </div>
+        <div dir="auto" style="display:contents">
+         <ol class="numbered-list" start="5" type="1">
+          <li>
+           <strong>
+            Apply Changes:
+           </strong>
+           <div dir="auto" style="display:contents">
+            <p>
+             Click
+             <strong>
+              Apply
+             </strong>
+             to save your changes. Once completed, your
+             <mark class="highlight-blue">
+              Essential Tools
+             </mark>
+             package is fully configured and ready for use.
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+            </p>
+           </div>
+          </li>
+         </ol>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+          <em>
+           <strong>
+            Now you are ready to use yours
+           </strong>
+          </em>
+          <em>
+           <mark class="highlight-blue">
+            <strong>
+             Essential Tools!
+            </strong>
+           </mark>
+          </em>
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+        <div dir="auto" style="display:contents">
+         <h1 class="block-color-gray_background">
+          📗 KEY FEATURES
+         </h1>
+        </div>
+        <div dir="auto" style="display:contents">
+         <details open="">
+          <summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">
+           <img alt="medium_green_bullet_16px" src="ESSENTIAL%20TOOLS/Asset_14.png" style="width:1em;height:1em"/>
+           <mark class="highlight-teal">
+           </mark>
+           <mark class="highlight-teal">
+            <a href="ESSENTIAL%20TOOLS/TOOLS%2019f71d4f255080998d25de4f36ddd916.html">
+             TOOLS
+            </a>
+           </mark>
+          </summary>
+          <div class="indented">
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              <img alt="small_green_bullet_8px" src="ESSENTIAL%20TOOLS/Asset_13.png" style="width:1em;height:1em"/>
+              ARCHITECT
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <figure class="image">
+                <a href="ESSENTIAL%20TOOLS/Captura_de_tela_2025-02-05_032826.png">
+                 <img src="ESSENTIAL%20TOOLS/Captura_de_tela_2025-02-05_032826.png" style="width:336px"/>
+                </a>
+               </figure>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex">
+                <div style="width:100%">
+                 <div dir="auto" style="display:contents">
+                  <p>
+                   <img alt="small_green_bullet_8px" src="ESSENTIAL%20TOOLS/Asset_13.png" style="width:1em;height:1em"/>
+                   <mark class="highlight-teal">
+                    <strong>
+                     Introducing Architect
+                    </strong>
+                   </mark>
+                  </p>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                   <em>
+                    <strong>
+                     Our advanced automation tool for Unity script creation. With Architect, you can generate scripts in bulk directly within the Unity Editor, ensuring that every script is consistently named and organized according to your predefined templates. Additionally, Architect automatically creates a quick-access script, seamlessly integrating custom creation menus into your project. This streamlines your workflow, reduces manual setup, and helps maintain a standardized codebase across your development environment
+                    </strong>
+                   </em>
+                  </p>
+                 </div>
+                </div>
+               </figure>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              <img alt="small_green_bullet_8px" src="ESSENTIAL%20TOOLS/Asset_13.png" style="width:1em;height:1em"/>
+              MASON
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <figure class="image">
+                <a href="ESSENTIAL%20TOOLS/Captura_de_tela_2025-02-05_032844.png">
+                 <img src="ESSENTIAL%20TOOLS/Captura_de_tela_2025-02-05_032844.png" style="width:336px"/>
+                </a>
+               </figure>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex">
+                <div style="width:100%">
+                 <div dir="auto" style="display:contents">
+                  <p>
+                   <img alt="small_green_bullet_8px" src="ESSENTIAL%20TOOLS/Asset_13.png" style="width:1em;height:1em"/>
+                   <mark class="highlight-teal">
+                    <strong>
+                     Introducing Mason
+                    </strong>
+                   </mark>
+                  </p>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                   <em>
+                    <strong>
+                     Our intuitive prefab management tool for Unity. With Mason, you can effortlessly visualize every prefab in your project and quickly spawn them directly into the Inspector. This streamlined workflow enhances your scene-building process, enabling rapid prototyping and organization, so you can focus on creating amazing experiences without the hassle of manual asset management.
+                    </strong>
+                   </em>
+                  </p>
+                 </div>
+                </div>
+               </figure>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              <img alt="small_green_bullet_8px" src="ESSENTIAL%20TOOLS/Asset_13.png" style="width:1em;height:1em"/>
+              SMITH
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <figure class="image">
+                <a href="ESSENTIAL%20TOOLS/Captura_de_tela_2025-02-05_032958.png">
+                 <img src="ESSENTIAL%20TOOLS/Captura_de_tela_2025-02-05_032958.png" style="width:336px"/>
+                </a>
+               </figure>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex">
+                <div style="width:100%">
+                 <div dir="auto" style="display:contents">
+                  <p>
+                   <img alt="small_green_bullet_8px" src="ESSENTIAL%20TOOLS/Asset_13.png" style="width:1em;height:1em"/>
+                   <mark class="highlight-teal">
+                    <strong>
+                     Introducing Smith
+                    </strong>
+                   </mark>
+                  </p>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                   <em>
+                    <strong>
+                     Our powerful reference management tool for Unity. With Smith, you can effortlessly create mass references in both manual and automatic modes, streamlining the process of managing recurring elements like event identifiers. Instead of hardcoding strings across multiple scripts, Smith enables you to define these references within a centralized, static script that can be easily accessed throughout your project. This approach not only ensures consistency but also significantly enhances the maintainability and organization of your codebase, making it an indispensable asset for efficient development.
+                    </strong>
+                   </em>
+                  </p>
+                 </div>
+                </div>
+               </figure>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+          </div>
+         </details>
+        </div>
+        <div dir="auto" style="display:contents">
+         <details open="">
+          <summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">
+           <img alt="medium_green_bullet_16px" src="ESSENTIAL%20TOOLS/Asset_14.png" style="width:1em;height:1em"/>
+           <mark class="highlight-teal">
+            <a href="https://www.notion.so/19171d4f2550802f83d1dc2b32695b07?pvs=21">
+             FRAMEWORK
+            </a>
+           </mark>
+          </summary>
+          <div class="indented">
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              <img alt="small_green_bullet_8px" src="ESSENTIAL%20TOOLS/Asset_13.png" style="width:1em;height:1em"/>
+              CORE
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <figure class="image">
+                <a href="ESSENTIAL%20TOOLS/ezgif.com-optimize_(2).gif">
+                 <img src="ESSENTIAL%20TOOLS/ezgif.com-optimize_(2).gif" style="width:480px"/>
+                </a>
+               </figure>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex">
+                <div style="width:100%">
+                 <div dir="auto" style="display:contents">
+                  <p>
+                   <em>
+                    <strong>
+                     Introducing Core, our comprehensive framework engineered to integrate best practices directly into Unity. Core streamlines your development process by offering a robust suite of tools and features, including:
+                    </strong>
+                   </em>
+                  </p>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Unique Attributes:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Empower rapid and distinctive development with custom attributes that simplify coding conventions and enforce consistency.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Automated Script Creation:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Utilize our script creation framework to rapidly generate singletons or other key elements, complete with built-in debugging tools.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Diverse Enums:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Access a wide range of enums to standardize and simplify decision-making logic within your projects.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Unity Extensions:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Enhance and extend native Unity functionality with specialized extensions tailored to common development needs.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Referenceable Primitives:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Manage scriptable variables efficiently using primitives designed to be easily referenced and maintained.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Scriptable Arrays:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Work with array-based scriptable variable primitives, enabling more dynamic and organized data management.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Secure Primitives:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Benefit from advanced security measures with primitives that incorporate offsets to obscure memory values, protecting sensitive data.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Custom Serializers:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Leverage a variety of serializers to handle items and data types not natively supported by Unity.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Utility Tools:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Take advantage of an assortment of utilities that cover a wide range of common development scenarios.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                   <em>
+                    <strong>
+                     With Core, you'll achieve a higher level of modularity, data security, and efficiency, making it an indispensable asset for crafting scalable, maintainable, and secure Unity projects.
+                    </strong>
+                   </em>
+                  </p>
+                 </div>
+                </div>
+               </figure>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+          </div>
+         </details>
+        </div>
+        <div dir="auto" style="display:contents">
+         <details open="">
+          <summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">
+           <img alt="medium_green_bullet_16px" src="ESSENTIAL%20TOOLS/Asset_14.png" style="width:1em;height:1em"/>
+           <a href="https://www.notion.so/19171d4f2550800abb93dbdcc7e1fa1a?pvs=21">
+           </a>
+           <mark class="highlight-teal">
+            <a href="https://www.notion.so/19171d4f2550800abb93dbdcc7e1fa1a?pvs=21">
+             SMART COMPONENTS
+            </a>
+           </mark>
+          </summary>
+          <div class="indented">
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              <img alt="small_green_bullet_8px" src="ESSENTIAL%20TOOLS/Asset_13.png" style="width:1em;height:1em"/>
+              <mark class="highlight-default">
+               ASPECT
+              </mark>
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <figure class="image">
+                <a href="ESSENTIAL%20TOOLS/Captura_de_tela_2025-02-11_124853.png">
+                 <img src="ESSENTIAL%20TOOLS/Captura_de_tela_2025-02-11_124853.png" style="width:288px"/>
+                </a>
+               </figure>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex">
+                <div style="width:100%">
+                 <div dir="auto" style="display:contents">
+                  <p>
+                   <em>
+                    <strong>
+                     Introducing our smart component Aspect designed to ensure that all content remains within the visible screen boundaries, dynamically adapting to various device types—whether it's a mobile device, PlayStation, or computer. This component guarantees an optimal and responsive user experience across all platforms.
+                    </strong>
+                   </em>
+                  </p>
+                 </div>
+                </div>
+               </figure>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              <img alt="small_green_bullet_8px" src="ESSENTIAL%20TOOLS/Asset_13.png" style="width:1em;height:1em"/>
+              CHAIN
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <figure class="image">
+                <a href="ESSENTIAL%20TOOLS/Captura_de_tela_2025-02-11_125051.png">
+                 <img src="ESSENTIAL%20TOOLS/Captura_de_tela_2025-02-11_125051.png" style="width:288px"/>
+                </a>
+               </figure>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex">
+                <div style="width:100%">
+                 <div dir="auto" style="display:contents">
+                  <p>
+                   <em>
+                    <strong>
+                     Introducing Chain, our dynamic smart component engineered to integrate best practices directly into Unity. Chain streamlines your event management by offering a robust suite of features, including:
+                    </strong>
+                   </em>
+                  </p>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Precise Event Sequencing:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Execute events and extended events in a controlled, synchronized order.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Configurable Delays:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Insert specific time intervals between events to fine-tune your game logic flow.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Variable-Driven Triggers:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Initiate events based on real-time variable changes, ensuring actions occur exactly when needed.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Synchronized Extended Events:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Seamlessly chain multiple events together, allowing for complex, cascading behaviors.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Customizable Workflow:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Tailor the sequencing logic to fit your unique project requirements, giving you full control over your event-driven architecture.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                   <em>
+                    <strong>
+                     Designed for Unity developers and indie studios alike, Chain empowers you to build powerful, responsive gameplay systems with precision and ease. Elevate your development process and unlock a new level of efficiency—experience the benefits of Chain today!
+                    </strong>
+                   </em>
+                  </p>
+                 </div>
+                </div>
+               </figure>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              <img alt="small_green_bullet_8px" src="ESSENTIAL%20TOOLS/Asset_13.png" style="width:1em;height:1em"/>
+              DISPATCHER
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <figure class="image">
+                <a href="ESSENTIAL%20TOOLS/Captura_de_tela_2025-02-12_075049.png">
+                 <img src="ESSENTIAL%20TOOLS/Captura_de_tela_2025-02-12_075049.png" style="width:336px"/>
+                </a>
+               </figure>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex">
+                <div style="width:100%">
+                 <div dir="auto" style="display:contents">
+                  <p>
+                   <em>
+                    <strong>
+                     Introducing Dispatcher, our dynamic smart component engineered to integrate best practices directly into Unity. Dispatcher streamlines event management by offering a robust suite of features, including:
+                    </strong>
+                   </em>
+                  </p>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Precise Timing Control:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Assign exact timings directly from the Unity Inspector to trigger events during animations or other sequences.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Custom Event Dispatching:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Operate in event mode to function as a custom event handler, seamlessly integrating with your Game Object and its components.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Configurable Triggers:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Set events to fire after a specific delay or when a designated variable changes, ensuring actions occur exactly when needed.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Component-Aware Logic:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Automatically detect and utilize components attached to the Game Object for streamlined event execution.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Singular Event Execution:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Unlike bulk event sequencing, Dispatcher focuses on firing individual events precisely, providing granular control over your event-driven workflows.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                   <em>
+                    <strong>
+                     Designed for Unity developers and indie studios seeking efficiency and precision, Dispatcher is your go-to solution for managing and synchronizing events in a simplified, organized manner. Elevate your development process and experience unparalleled control with Dispatcher today!
+                    </strong>
+                   </em>
+                  </p>
+                 </div>
+                </div>
+               </figure>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              <img alt="small_green_bullet_8px" src="ESSENTIAL%20TOOLS/Asset_13.png" style="width:1em;height:1em"/>
+              EXPERIMENT
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <figure class="image">
+                <a href="ESSENTIAL%20TOOLS/Captura_de_tela_2025-02-12_075118.png">
+                 <img src="ESSENTIAL%20TOOLS/Captura_de_tela_2025-02-12_075118.png" style="width:288px"/>
+                </a>
+               </figure>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex">
+                <div style="width:100%">
+                 <div dir="auto" style="display:contents">
+                  <p>
+                   <em>
+                    <strong>
+                     Introducing Experiment, our innovative smart component engineered to streamline rapid code prototyping and testing within Unity. Experiment empowers you to quickly explore various code implementations and methods, whether in the Unity Editor or during Runtime. With intuitive controls and support for advanced features, you can effortlessly prototype, debug, and fine-tune your game systems. Perfect for developers eager to push boundaries and accelerate their experimentation process, Experiment transforms your workflow into a dynamic, creative playground.
+                    </strong>
+                   </em>
+                  </p>
+                 </div>
+                </div>
+               </figure>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              <img alt="small_green_bullet_8px" src="ESSENTIAL%20TOOLS/Asset_13.png" style="width:1em;height:1em"/>
+              FADE
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <figure class="image">
+                <a href="ESSENTIAL%20TOOLS/Captura_de_tela_2025-02-11_125341.png">
+                 <img src="ESSENTIAL%20TOOLS/Captura_de_tela_2025-02-11_125341.png" style="width:336px"/>
+                </a>
+               </figure>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex">
+                <div style="width:100%">
+                 <div dir="auto" style="display:contents">
+                  <p>
+                   <em>
+                    <strong>
+                     Introducing Fade, the ultimate smart component for seamless visibility control in Unity. Whether you're working with Game Objects, UI elements, text, images, or Canvas Groups, Fade provides a powerful and intuitive way to manage smooth transitions.
+                    </strong>
+                   </em>
+                  </p>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Multiple Fade Modes:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Effortlessly apply Fade In, Fade Out, Fade In &amp; Out, or Fade Out &amp; In effects.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Broad Compatibility:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Works with a variety of Unity components, including UI elements and 3D objects.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Smooth &amp; Precise Transitions:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Achieve polished, professional-looking fades with full control over duration and easing.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                   <em>
+                    <strong>
+                     Designed for developers looking to enhance UI and scene transitions, Fade offers a simple yet effective way to create dynamic visual effects. Elevate your project's presentation with smooth, customizable fades today!
+                    </strong>
+                   </em>
+                  </p>
+                 </div>
+                </div>
+               </figure>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+           <div dir="auto" style="display:contents">
+            <details open="">
+             <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+              <img alt="small_green_bullet_8px" src="ESSENTIAL%20TOOLS/Asset_13.png" style="width:1em;height:1em"/>
+              FLEX
+             </summary>
+             <div class="indented">
+              <div dir="auto" style="display:contents">
+               <hr/>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <figure class="image">
+                <a href="ESSENTIAL%20TOOLS/Captura_de_tela_2025-02-11_125402.png">
+                 <img src="ESSENTIAL%20TOOLS/Captura_de_tela_2025-02-11_125402.png" style="width:336px"/>
+                </a>
+               </figure>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex">
+                <div style="width:100%">
+                 <div dir="auto" style="display:contents">
+                  <p>
+                   <em>
+                    <strong>
+                     Introducing Flex, the smart component designed for effortless UI structuring and organization in Unity. Flex provides a dynamic grid system that allows you to sectorize and manage UI elements with precision, offering real-time visual feedback on layout adjustments.
+                    </strong>
+                   </em>
+                  </p>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Dynamic Grid Management:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Easily modify and restructure your UI grid to fit your design needs.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Visual Grid Feedback:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Instantly see changes and adjustments in real time for better UI organization.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <ul class="bulleted-list">
+                   <li style="list-style-type:disc">
+                    <mark class="highlight-teal">
+                     <strong>
+                      Multi-Directional Control:
+                     </strong>
+                    </mark>
+                    <strong>
+                     Adjust the grid's matrix in any direction—up, down, left, or right—with seamless transitions.
+                    </strong>
+                   </li>
+                  </ul>
+                 </div>
+                 <div dir="auto" style="display:contents">
+                  <p>
+                   <em>
+                    <strong>
+                     Perfect for developers and UI designers, Flex streamlines interface organization, ensuring adaptability and visual clarity in any project. Optimize your UI workflow with Flex today!
+                    </strong>
+                   </em>
+                  </p>
+                 </div>
+                </div>
+               </figure>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+              <div dir="auto" style="display:contents">
+               <p>
+               </p>
+              </div>
+             </div>
+            </details>
+           </div>
+          </div>
+         </details>
+        </div>
+        <div dir="auto" style="display:contents">
+         <h1 class="block-color-gray_background">
+          📕 FAQ
+         </h1>
+        </div>
+        <div dir="auto" style="display:contents">
+         <details open="">
+          <summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">
+           <img alt="medium_red_bullet_16px" src="ESSENTIAL%20TOOLS/Asset_16.png" style="width:1em;height:1em"/>
+           COMMOM QUESTIONS
+          </summary>
+          <div class="indented">
+           <div dir="auto" style="display:contents">
+            <p>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+             ❓
+             <strong>
+              My utility panel still appears, requiring configuration or update. What should I do?
+             </strong>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <ul class="bulleted-list">
+             <li style="list-style-type:disc">
+              ❗Verify the package status by clicking on
+              <strong>
+               Packages
+              </strong>
+              ; the status icon next to each package will indicate the issue.
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:circle">
+                 ❗
+                 <strong>
+                  RED:
+                 </strong>
+                 A dependency is missing.
+                </li>
+               </ul>
+              </div>
+              <div dir="auto" style="display:contents">
+               <ul class="bulleted-list">
+                <li style="list-style-type:circle">
+                 ❗
+                 <strong>
+                  YELLOW:
+                 </strong>
+                 An update is required.
+                </li>
+               </ul>
+              </div>
+             </li>
+            </ul>
+           </div>
+           <div dir="auto" style="display:contents">
+            <ul class="bulleted-list">
+             <li style="list-style-type:disc">
+              ❗If the package still displays a RED or YELLOW status despite having the required dependency, please try running the
+              <strong>
+               AUTO Installation
+              </strong>
+              to resolve the issue.
+             </li>
+            </ul>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+             ❓
+             <strong>
+              Can I purchase individual packages? Will they conflict?
+             </strong>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <ul class="bulleted-list">
+             <li style="list-style-type:disc">
+              ❗
+              <strong>
+               Yes,
+              </strong>
+              you can purchase individual packages. The package system is designed so that each component of Essential Tools functions independently, ensuring that there are no conflicts between separate packages.
+             </li>
+            </ul>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+             ❓
+             <strong>
+              Which packages are included when I purchase a package?
+             </strong>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <ul class="bulleted-list">
+             <li style="list-style-type:disc">
+              ❗ Purchasing a package of type
+              <strong>
+               SYSTEM
+              </strong>
+              grants you access to all components within the
+              <strong>
+               EXTRAS
+              </strong>
+              section as well as a portion of the
+              <strong>
+               FRAMEWORK CORE.
+              </strong>
+             </li>
+            </ul>
+           </div>
+           <div dir="auto" style="display:contents">
+            <ul class="bulleted-list">
+             <li style="list-style-type:disc">
+              ❗ Please note that certain features of the
+              <strong>
+               CORE
+              </strong>
+              may only be available in their dedicated package or as part of the
+              <strong>
+               COMPLETE TOOLS
+              </strong>
+              bundle.
+             </li>
+            </ul>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+             ❓
+             <strong>
+              I have a voucher. How do I redeem it?
+             </strong>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <ul class="bulleted-list">
+             <li style="list-style-type:disc">
+              ❗ To redeem your voucher, please send an email to
+              <a href="mailto:support@astarbr-assets.store">
+               support@astarbr-assets.store
+              </a>
+              . Our support team will assist you with the redemption process.
+             </li>
+            </ul>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+            </p>
+           </div>
+          </div>
+         </details>
+        </div>
+        <div dir="auto" style="display:contents">
+         <details open="">
+          <summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">
+           <img alt="medium_red_bullet_16px" src="ESSENTIAL%20TOOLS/Asset_16.png" style="width:1em;height:1em"/>
+           COMPATIBILITY
+          </summary>
+          <div class="indented">
+           <div dir="ltr" style="display:contents">
+            <table class="simple-table">
+             <thead class="simple-table-header">
+              <div dir="ltr" style="display:contents">
+               <tr>
+                <th class="block-color-red_background simple-table-header" style="width:329.71875px">
+                 New Unity Versions (6.0+)
+                </th>
+                <th class="block-color-red_background simple-table-header" style="width:309.71875px">
+                 All Versions (2018.1+)
+                </th>
+               </tr>
+              </div>
+             </thead>
+             <tbody>
+              <div dir="ltr" style="display:contents">
+               <tr>
+                <td style="width:329.71875px">
+                 Unity 6.0
+                </td>
+                <td style="width:309.71875px">
+                 Unity 2018.1
+                </td>
+               </tr>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <tr>
+                <td style="width:329.71875px">
+                 Unity 6.1
+                </td>
+                <td style="width:309.71875px">
+                 Unity 2018.2
+                </td>
+               </tr>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <tr>
+                <td style="width:329.71875px">
+                 Unity 6.2 ( BETA )
+                </td>
+                <td style="width:309.71875px">
+                 Unity 2018.3
+                </td>
+               </tr>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <tr>
+                <td style="width:329.71875px">
+                </td>
+                <td style="width:309.71875px">
+                 Unity 2019.1
+                </td>
+               </tr>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <tr>
+                <td style="width:329.71875px">
+                </td>
+                <td style="width:309.71875px">
+                 Unity 2019.2
+                </td>
+               </tr>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <tr>
+                <td style="width:329.71875px">
+                </td>
+                <td style="width:309.71875px">
+                 Unity 2019.3
+                </td>
+               </tr>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <tr>
+                <td style="width:329.71875px">
+                </td>
+                <td style="width:309.71875px">
+                 Unity 2020.1
+                </td>
+               </tr>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <tr>
+                <td style="width:329.71875px">
+                </td>
+                <td style="width:309.71875px">
+                 Unity 2020.2
+                </td>
+               </tr>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <tr>
+                <td style="width:329.71875px">
+                </td>
+                <td style="width:309.71875px">
+                 Unity 2020.3
+                </td>
+               </tr>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <tr>
+                <td style="width:329.71875px">
+                </td>
+                <td style="width:309.71875px">
+                 Unity 2021.1
+                </td>
+               </tr>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <tr>
+                <td style="width:329.71875px">
+                </td>
+                <td style="width:309.71875px">
+                 Unity 2021.2
+                </td>
+               </tr>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <tr>
+                <td style="width:329.71875px">
+                </td>
+                <td style="width:309.71875px">
+                 Unity 2021.3
+                </td>
+               </tr>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <tr>
+                <td style="width:329.71875px">
+                </td>
+                <td style="width:309.71875px">
+                 Unity 2022.1
+                </td>
+               </tr>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <tr>
+                <td style="width:329.71875px">
+                </td>
+                <td style="width:309.71875px">
+                 Unity 2022.2
+                </td>
+               </tr>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <tr>
+                <td style="width:329.71875px">
+                </td>
+                <td style="width:309.71875px">
+                 Unity 2023.1
+                </td>
+               </tr>
+              </div>
+              <div dir="ltr" style="display:contents">
+               <tr>
+                <td style="width:329.71875px">
+                </td>
+                <td style="width:309.71875px">
+                 Unity 2023.2
+                </td>
+               </tr>
+              </div>
+             </tbody>
+            </table>
+           </div>
+          </div>
+         </details>
+        </div>
+        <div dir="auto" style="display:contents">
+         <details open="">
+          <summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">
+           <img alt="medium_red_bullet_16px" src="ESSENTIAL%20TOOLS/Asset_16.png" style="width:1em;height:1em"/>
+           TROUBLESHOOT
+          </summary>
+          <div class="indented">
+           <div dir="auto" style="display:contents">
+            <p>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+             ❌
+             <mark class="highlight-red_background">
+              Auto Installation Fail:
+             </mark>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+             ✅
+             <mark class="highlight-default">
+              <mark class="highlight-teal_background">
+               In case fail installation just press
+              </mark>
+             </mark>
+             <mark class="highlight-yellow">
+              <mark class="highlight-teal_background">
+               AUTO
+              </mark>
+             </mark>
+             <mark class="highlight-default">
+              <mark class="highlight-teal_background">
+               again and wait for it to finish
+              </mark>
+             </mark>
+             <mark class="highlight-teal_background">
+              .
+             </mark>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+             ❌
+             <mark class="highlight-red_background">
+              Manual Installation Fail:
+             </mark>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+             ✅
+             <mark class="highlight-default">
+              <mark class="highlight-teal_background">
+               In case fail installation check if dependencies are installed
+              </mark>
+             </mark>
+             <mark class="highlight-teal_background">
+              .
+             </mark>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+             ❌
+             <mark class="highlight-red_background">
+              Error in Smart Component:
+             </mark>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+             ✅
+             <mark class="highlight-default">
+              <mark class="highlight-teal_background">
+               In case error in Smart Component, toggle the action button LOG, and check console information on how to fix, if persists try to reach support or read documentation
+              </mark>
+             </mark>
+             <mark class="highlight-teal_background">
+              .
+             </mark>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+             ❌
+             <mark class="highlight-red_background">
+              Error in Integrated System:
+             </mark>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+             ✅
+             <mark class="highlight-default">
+              <mark class="highlight-teal_background">
+               In case error in Integrated System, check documentation for further information
+              </mark>
+             </mark>
+             <mark class="highlight-teal_background">
+              .
+             </mark>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+             ❌
+             <mark class="highlight-red_background">
+              Error in System:
+             </mark>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+             ✅
+             <mark class="highlight-teal_background">
+              Systems are design to be error free, in case error check if any reference is missing or the page HOW TO SETUP the particular system.
+             </mark>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+             <mark class="highlight-teal_background">
+              ✅ if still persist try to reach out our team on unity forum, or via e-mail
+             </mark>
+             <mark class="highlight-blue">
+              <mark class="highlight-teal_background">
+               <a href="mailto:support@astarbr-assets.store">
+                support@astarbr-assets.store
+               </a>
+              </mark>
+             </mark>
+             <mark class="highlight-blue">
+              <mark class="highlight-teal_background">
+               .
+              </mark>
+             </mark>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+            </p>
+           </div>
+           <div dir="auto" style="display:contents">
+            <p>
+            </p>
+           </div>
+          </div>
+         </details>
+        </div>
+        <div dir="auto" style="display:contents">
+         <p>
+         </p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div dir="auto" style="display:contents">
+     <hr/>
+    </div>
+    <div dir="auto" style="display:contents">
+     <p>
+     </p>
+    </div>
+    <div dir="ltr" style="display:contents">
+     <figure class="image" style="text-align:center">
+      <a href="ESSENTIAL%20TOOLS/Essential-Tools_Icon_Base_Arrow_Up_1.png">
+       <img src="ESSENTIAL%20TOOLS/Essential-Tools_Icon_Base_Arrow_Up_1.png" style="width:32.99715805053711px"/>
+      </a>
+     </figure>
+    </div>
+    <div dir="auto" style="display:contents">
+     <p>
+     </p>
+    </div>
+    <div dir="auto" style="display:contents">
+     <p>
+     </p>
+    </div>
+    <div dir="auto" style="display:contents">
+     <p>
+     </p>
+    </div>
+    <div dir="auto" style="display:contents">
+     <p>
+     </p>
+    </div>
+    <div dir="ltr" style="display:contents">
+     <figure class="block-color-orange callout" style="white-space:pre-wrap;display:flex">
+      <div style="width:100%">
+       <div dir="auto" style="display:contents">
+        <div>
+         <div dir="auto" style="display:contents">
+          <div class="column-list">
+           <div dir="auto" style="display:contents">
+            <div class="column" style="width:62.5%">
+             <div dir="auto" style="display:contents">
+              <details open="">
+               <summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">
+                📲 CONTACT
+               </summary>
+               <div class="indented">
+                <div dir="auto" style="display:contents">
+                 <p>
+                  📩
+                  <mark class="highlight-blue">
+                   <strong>
+                   </strong>
+                  </mark>
+                  <mark class="highlight-blue">
+                   <strong>
+                    <a href="mailto:support@astarbr-assets.store">
+                     MAIL
+                    </a>
+                   </strong>
+                  </mark>
+                 </p>
+                </div>
+                <div dir="auto" style="display:contents">
+                 <p>
+                  👨🏻‍🔧
+                  <strong>
+                   <a href="https://www.notion.so/ESSENTIAL-TOOLS-HELP-CENTER-1d571d4f255080e49176e53ff73253c4?pvs=21">
+                    HELP CENTER
+                   </a>
+                  </strong>
+                 </p>
+                </div>
+               </div>
+              </details>
+             </div>
+             <div dir="auto" style="display:contents">
+              <p>
+              </p>
+             </div>
+            </div>
+           </div>
+           <div dir="auto" style="display:contents">
+            <div class="column" style="width:37.49999999999999%">
+             <div dir="auto" style="display:contents">
+              <details open="">
+               <summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">
+                📄INFORMATIVE
+               </summary>
+               <div class="indented">
+                <div dir="auto" style="display:contents">
+                 <p>
+                  🌐
+                  <mark class="highlight-blue">
+                   <strong>
+                    <a href="https://assetstore.unity.com/publishers/57936">
+                     UNITY ASSET STORE
+                    </a>
+                   </strong>
+                  </mark>
+                 </p>
+                </div>
+                <div dir="auto" style="display:contents">
+                 <p>
+                 </p>
+                </div>
+                <div dir="auto" style="display:contents">
+                 <p>
+                 </p>
+                </div>
+               </div>
+              </details>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </figure>
+    </div>
+    <div dir="auto" style="display:contents">
+     <p>
+     </p>
+    </div>
+    <div dir="auto" style="display:contents">
+     <p>
+     </p>
+    </div>
+   </div>
+  </article>
+  <span class="sans" style="font-size:14px;padding-top:2em">
+  </span>
+ </body>
+</html>
