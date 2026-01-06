@@ -15,23 +15,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Download notionbackup
         run: |
-          curl -L https://github.com/sueszli/notionbackup/releases/latest/download/notionbackup-linux-amd64 \
-            -o notionbackup
+          set -e
+
+          echo "Downloading notionbackup..."
+          curl -L https://github.com/sueszli/notionbackup/releases/latest/download/notionbackup_Linux_x86_64.tar.gz \
+            -o notionbackup.tar.gz
+
+          echo "Extracting..."
+          tar -xzf notionbackup.tar.gz
+
+          echo "Installing..."
           chmod +x notionbackup
           sudo mv notionbackup /usr/local/bin/notionbackup
 
-      - name: Build site
+          echo "Validating install..."
+          notionbackup --version
+
+      - name: Build site from Notion
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
         run: |
+          set -e
           notionbackup build --config notionbackup.yml
 
-      - name: Upload Pages artifact
+      - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
