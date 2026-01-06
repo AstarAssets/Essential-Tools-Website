@@ -18,18 +18,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-
-      - name: Install notionbackup
-        run: npm install -g notionbackup
+      - name: Download notionbackup
+        run: |
+          curl -L https://github.com/sueszli/notionbackup/releases/latest/download/notionbackup-linux-amd64 \
+            -o notionbackup
+          chmod +x notionbackup
+          sudo mv notionbackup /usr/local/bin/notionbackup
 
       - name: Build site
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-        run: notionbackup build --config notionbackup.yml
+        run: |
+          notionbackup build --config notionbackup.yml
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
