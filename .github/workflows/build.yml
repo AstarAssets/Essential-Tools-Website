@@ -22,8 +22,9 @@ jobs:
         run: |
           set -e
 
-          echo "Downloading notionbackup..."
-          curl -L https://github.com/sueszli/notionbackup/releases/latest/download/notionbackup_Linux_x86_64.tar.gz \
+          echo "Downloading notionbackup binary..."
+          curl -fL \
+            https://github.com/sueszli/notionbackup/releases/latest/download/notionbackup_linux_amd64.tar.gz \
             -o notionbackup.tar.gz
 
           echo "Extracting..."
@@ -33,7 +34,7 @@ jobs:
           chmod +x notionbackup
           sudo mv notionbackup /usr/local/bin/notionbackup
 
-          echo "Validating install..."
+          echo "Validating installation..."
           notionbackup --version
 
       - name: Build site from Notion
