@@ -18,30 +18,29 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Download notionbackup
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+
+      - name: Clone notionbackup
         run: |
-          set -e
+          git clone https://github.com/sueszli/notionbackup.git
 
-          echo "Downloading notionbackup binary..."
-          curl -fL \
-            https://github.com/sueszli/notionbackup/releases/latest/download/notionbackup_linux_amd64.tar.gz \
-            -o notionbackup.tar.gz
+      - name: Build notionbackup
+        run: |
+          cd notionbackup
+          go build -o notionbackup
 
-          echo "Extracting..."
-          tar -xzf notionbackup.tar.gz
-
-          echo "Installing..."
-          chmod +x notionbackup
-          sudo mv notionbackup /usr/local/bin/notionbackup
-
-          echo "Validating installation..."
+      - name: Install notionbackup
+        run: |
+          sudo mv notionbackup/notionbackup /usr/local/bin/notionbackup
           notionbackup --version
 
       - name: Build site from Notion
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
         run: |
-          set -e
           notionbackup build --config notionbackup.yml
 
       - name: Upload GitHub Pages artifact
