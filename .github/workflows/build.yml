@@ -13,16 +13,34 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: leoncvlt/loconotion # Usa a imagem oficial do Docker Hub
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install Chrome
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+
+      - name: Clone Loconotion and Install Dependencies
+        run: |
+          git clone https://github.com/leoncvlt/loconotion.git loconotion_repo
+          cd loconotion_repo
+          pip install -r requirements.txt
+
       - name: Run Loconotion
         run: |
-          # O Loconotion dentro do Docker precisa rodar o script python
-          python3 loconotion.py config.yaml
+          # Movemos o seu config.yaml para dentro da pasta do repositório clonado
+          cp config.yaml loconotion_repo/config.yaml
+          cd loconotion_repo
+          python loconotion.py config.yaml
+          # Movemos o resultado de volta para a raiz para o upload
+          mv dist ../dist
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
