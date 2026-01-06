@@ -3,8 +3,6 @@ name: Loconotion Update
 on:
   push:
     branches: [ main ]
-  schedule:
-    - cron: '0 0 * * *'
   workflow_dispatch: 
 
 permissions:
@@ -12,26 +10,24 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
   build:
     runs-on: ubuntu-latest
+    container:
+      image: leoncvlt/loconotion # Usa a imagem oficial do Docker Hub
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Run Loconotion
-        uses: leoncvlt/loconotion-action@v1
-        with:
-          config_file: 'config.yaml'
+        run: |
+          # O Loconotion dentro do Docker precisa rodar o script python
+          python3 loconotion.py config.yaml
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist 
+          path: ./dist
 
   deploy:
     environment:
