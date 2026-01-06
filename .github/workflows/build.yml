@@ -22,24 +22,19 @@ jobs:
         with:
           python-version: '3.9'
 
-      - name: Install Chrome
+      - name: Clone Loconotion
         run: |
-          sudo apt-get update
-          sudo apt-get install -y google-chrome-stable
-
-      - name: Clone Loconotion and Install Dependencies
-        run: |
-          git clone https://github.com/leoncvlt/loconotion.git loconotion_repo
-          cd loconotion_repo
-          pip install -r requirements.txt
+          git clone https://github.com/leoncvlt/loconotion.git .loconotion
+          pip install -r .loconotion/requirements.txt
 
       - name: Run Loconotion
         run: |
-          # Movemos o seu config.yaml para dentro da pasta do repositório clonado
-          cp config.yaml loconotion_repo/config.yaml
-          cd loconotion_repo
+          # Movemos os arquivos necessários para a pasta do loconotion para evitar erro de path
+          cp config.yaml .loconotion/config.yaml
+          cd .loconotion
+          # Rodamos com o modo log ativo para ver o erro real se falhar
           python loconotion.py config.yaml
-          # Movemos o resultado de volta para a raiz para o upload
+          # Movemos a pasta gerada para o local correto
           mv dist ../dist
 
       - name: Upload artifact
@@ -50,7 +45,6 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
