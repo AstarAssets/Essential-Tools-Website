@@ -1,9 +1,9 @@
-name: Loconotion Update
+name: Build Notion Site
 
 on:
   push:
     branches: [ main ]
-  workflow_dispatch: 
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -13,37 +13,35 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          python-version: '3.9'
+          node-version: 18
 
-      - name: Clone Loconotion
-        run: |
-          # Clonamos o conteúdo direto para a pasta atual
-          git clone https://github.com/leoncvlt/loconotion.git .
-          pip install -r requirements.txt
+      - name: Install notionbackup
+        run: npm install -g notionbackup
 
-      - name: Run Loconotion
-        run: |
-          # Rodamos como módulo conforme a estrutura do repo oficial
-          python -m loconotion config.yaml
+      - name: Build site
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        run: notionbackup build --config notionbackup.yml
 
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
-    runs-on: ubuntu-latest
-    needs: build
+
     steps:
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
